@@ -1,0 +1,16 @@
+[tool.poetry]
+name = "management-suite"
+version = "0.1.0"
+description = "Mathtrix Event Management Suite"
+authors = ["Harikeshav R <r.harikeshav@gmail.com>"]
+license = "GNU General Public License v3.0"
+readme = "README.md"
+packages = [{include = "management_suite"}]
+
+[tool.poetry.dependencies]
+python = ">=3.11,<3.12"
+
+
+[build-system]
+requires = ["poetry-core"]
+build-backend = "poetry.core.masonry.api"
