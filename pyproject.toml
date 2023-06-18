@@ -9,6 +9,9 @@ packages = [{include = "management_suite"}]
 
 [tool.poetry.dependencies]
 python = ">=3.11,<3.12"
+pyside6 = "^6.5.1.1"
+yagmail = "^0.15.293"
+requests = "^2.31.0"
 
 
 [build-system]
