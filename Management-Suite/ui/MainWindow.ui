@@ -67,7 +67,7 @@
     <item>
      <widget class="QTabWidget" name="main_window_tabs">
       <property name="enabled">
-       <bool>true</bool>
+       <bool>false</bool>
       </property>
       <property name="tabShape">
        <enum>QTabWidget::Rounded</enum>
@@ -164,7 +164,11 @@
              </widget>
             </item>
             <item>
-             <widget class="QComboBox" name="mailing_list_recipients_combo_box"/>
+             <widget class="QComboBox" name="mailing_list_recipients_combo_box">
+              <property name="enabled">
+               <bool>false</bool>
+              </property>
+             </widget>
             </item>
            </layout>
           </item>
@@ -178,7 +182,11 @@
              </widget>
             </item>
             <item>
-             <widget class="QLineEdit" name="mailing_list_subject_field"/>
+             <widget class="QLineEdit" name="mailing_list_subject_field">
+              <property name="enabled">
+               <bool>false</bool>
+              </property>
+             </widget>
             </item>
            </layout>
           </item>
@@ -190,7 +198,11 @@
            </widget>
           </item>
           <item>
-           <widget class="QTextEdit" name="mailing_list_mail_body_field"/>
+           <widget class="QTextEdit" name="mailing_list_mail_body_field">
+            <property name="enabled">
+             <bool>false</bool>
+            </property>
+           </widget>
           </item>
           <item>
            <widget class="QLabel" name="attachments_label">
@@ -216,6 +228,9 @@
             </item>
             <item>
              <widget class="QPushButton" name="mailing_list_add_attachments_button">
+              <property name="enabled">
+               <bool>false</bool>
+              </property>
               <property name="text">
                <string>Add Attachments</string>
               </property>
@@ -260,6 +275,9 @@
             </item>
             <item>
              <widget class="QPushButton" name="mailing_list_send_email_button">
+              <property name="enabled">
+               <bool>false</bool>
+              </property>
               <property name="text">
                <string>Send Email</string>
               </property>
