@@ -73,7 +73,7 @@
        <enum>QTabWidget::Rounded</enum>
       </property>
       <property name="currentIndex">
-       <number>0</number>
+       <number>2</number>
       </property>
       <widget class="QWidget" name="mailing_list_tab">
        <attribute name="title">
@@ -894,8 +894,8 @@
        <attribute name="title">
         <string>Update Event</string>
        </attribute>
-       <layout class="QVBoxLayout" name="verticalLayout_5">
-        <item>
+       <layout class="QGridLayout" name="gridLayout_3">
+        <item row="0" column="0" colspan="2">
          <layout class="QHBoxLayout" name="horizontalLayout_17">
           <item>
            <spacer name="horizontalSpacer_23">
@@ -935,78 +935,74 @@
           </item>
          </layout>
         </item>
-        <item>
+        <item row="1" column="0" colspan="2">
          <widget class="Line" name="line_4">
           <property name="orientation">
            <enum>Qt::Horizontal</enum>
           </property>
          </widget>
         </item>
-        <item>
-         <layout class="QGridLayout" name="gridLayout_11">
-          <item row="0" column="0">
-           <widget class="QLabel" name="update_event_event_name_label">
-            <property name="text">
-             <string>Event Name:</string>
-            </property>
-           </widget>
-          </item>
-          <item row="0" column="1">
-           <widget class="QLabel" name="update_event_event_icon_label">
-            <property name="text">
-             <string>Event Icon URL:</string>
-            </property>
-           </widget>
-          </item>
-          <item row="1" column="0">
-           <widget class="QLineEdit" name="update_event_event_name_field"/>
-          </item>
-          <item row="1" column="1">
-           <widget class="QLineEdit" name="update_event_event_icon_field"/>
-          </item>
-          <item row="2" column="0">
-           <widget class="QLabel" name="update_event_event_tagline_label">
-            <property name="text">
-             <string>Event Tagline:</string>
-            </property>
-           </widget>
-          </item>
-          <item row="2" column="1">
-           <widget class="QLabel" name="update_event_event_rules_label">
-            <property name="text">
-             <string>Event Rules:</string>
-            </property>
-           </widget>
-          </item>
-          <item row="3" column="0">
-           <widget class="QTextEdit" name="update_event_event_tagline_field"/>
-          </item>
-          <item row="3" column="1">
-           <widget class="QTextEdit" name="update_event_event_rules_field"/>
-          </item>
-          <item row="4" column="0">
-           <widget class="QLabel" name="update_event_event_description_label">
-            <property name="text">
-             <string>Event Description:</string>
-            </property>
-           </widget>
-          </item>
-          <item row="4" column="1">
-           <widget class="QLabel" name="update_event_event_heads_label">
-            <property name="text">
-             <string>Event Heads:</string>
-            </property>
-           </widget>
-          </item>
-          <item row="5" column="0">
-           <widget class="QTextEdit" name="update_event_event_description_field"/>
-          </item>
-          <item row="5" column="1">
-           <widget class="QTextEdit" name="update_event_event_heads_field"/>
-          </item>
-         </layout>
+        <item row="2" column="0">
+         <widget class="QLabel" name="update_event_maximum_participants_label">
+          <property name="text">
+           <string>Maximum Participants:</string>
+          </property>
+         </widget>
         </item>
-        <item>
+        <item row="2" column="1">
+         <widget class="QLabel" name="update_event_event_icon_label">
+          <property name="text">
+           <string>Event Icon URL:</string>
+          </property>
+         </widget>
+        </item>
+        <item row="3" column="0">
+         <widget class="QSpinBox" name="update_event_maximum_participants_spinbox"/>
+        </item>
+        <item row="3" column="1">
+         <widget class="QLineEdit" name="update_event_event_icon_field"/>
+        </item>
+        <item row="4" column="0">
+         <widget class="QLabel" name="update_event_event_tagline_label">
+          <property name="text">
+           <string>Event Tagline:</string>
+          </property>
+         </widget>
+        </item>
+        <item row="4" column="1">
+         <widget class="QLabel" name="update_event_event_rules_label">
+          <property name="text">
+           <string>Event Rules:</string>
+          </property>
+         </widget>
+        </item>
+        <item row="5" column="0">
+         <widget class="QTextEdit" name="update_event_event_tagline_field"/>
+        </item>
+        <item row="5" column="1">
+         <widget class="QTextEdit" name="update_event_event_rules_field"/>
+        </item>
+        <item row="6" column="0">
+         <widget class="QLabel" name="update_event_event_description_label">
+          <property name="text">
+           <string>Event Description:</string>
+          </property>
+         </widget>
+        </item>
+        <item row="6" column="1">
+         <widget class="QLabel" name="update_event_event_heads_label">
+          <property name="text">
+           <string>Event Heads:</string>
+          </property>
+         </widget>
+        </item>
+        <item row="7" column="0">
+         <widget class="QTextEdit" name="update_event_event_description_field"/>
+        </item>
+        <item row="7" column="1">
+         <widget class="QTextEdit" name="update_event_event_heads_field"/>
+        </item>
+        <item row="8" column="0">
          <layout class="QHBoxLayout" name="horizontalLayout_21">
           <item>
            <spacer name="horizontalSpacer_26">

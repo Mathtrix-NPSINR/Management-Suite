@@ -1,7 +1,7 @@
 # -*- coding: utf-8 -*-
 
 ################################################################################
-## Form generated from reading UI file 'MainWindowWiBRnq.ui'
+## Form generated from reading UI file 'MainWindowGZlvIh.ui'
 ##
 ## Created by: Qt User Interface Compiler version 6.5.1
 ##
@@ -19,8 +19,8 @@ from PySide6.QtGui import (QAction, QBrush, QColor, QConicalGradient,
 from PySide6.QtWidgets import (QApplication, QComboBox, QFrame, QGridLayout,
     QHBoxLayout, QHeaderView, QLabel, QLineEdit,
     QMainWindow, QPushButton, QSizePolicy, QSpacerItem,
-    QTabWidget, QTextEdit, QTreeWidget, QTreeWidgetItem,
-    QVBoxLayout, QWidget)
+    QSpinBox, QTabWidget, QTextEdit, QTreeWidget,
+    QTreeWidgetItem, QVBoxLayout, QWidget)
 
 class Ui_MainWindow(object):
     def setupUi(self, MainWindow):
@@ -638,8 +638,8 @@ class Ui_MainWindow(object):
         self.main_window_tabs.addTab(self.on_spot_registration_tab, "")
         self.update_event_tab = QWidget()
         self.update_event_tab.setObjectName(u"update_event_tab")
-        self.verticalLayout_5 = QVBoxLayout(self.update_event_tab)
-        self.verticalLayout_5.setObjectName(u"verticalLayout_5")
+        self.gridLayout_3 = QGridLayout(self.update_event_tab)
+        self.gridLayout_3.setObjectName(u"gridLayout_3")
         self.horizontalLayout_17 = QHBoxLayout()
         self.horizontalLayout_17.setObjectName(u"horizontalLayout_17")
         self.horizontalSpacer_23 = QSpacerItem(40, 20, QSizePolicy.Expanding, QSizePolicy.Minimum)
@@ -661,79 +661,74 @@ class Ui_MainWindow(object):
         self.horizontalLayout_17.addItem(self.horizontalSpacer_22)
 
 
-        self.verticalLayout_5.addLayout(self.horizontalLayout_17)
+        self.gridLayout_3.addLayout(self.horizontalLayout_17, 0, 0, 1, 2)
 
         self.line_4 = QFrame(self.update_event_tab)
         self.line_4.setObjectName(u"line_4")
         self.line_4.setFrameShape(QFrame.HLine)
         self.line_4.setFrameShadow(QFrame.Sunken)
 
-        self.verticalLayout_5.addWidget(self.line_4)
+        self.gridLayout_3.addWidget(self.line_4, 1, 0, 1, 2)
 
-        self.gridLayout_11 = QGridLayout()
-        self.gridLayout_11.setObjectName(u"gridLayout_11")
-        self.update_event_event_name_label = QLabel(self.update_event_tab)
-        self.update_event_event_name_label.setObjectName(u"update_event_event_name_label")
+        self.update_event_maximum_participants_label = QLabel(self.update_event_tab)
+        self.update_event_maximum_participants_label.setObjectName(u"update_event_maximum_participants_label")
 
-        self.gridLayout_11.addWidget(self.update_event_event_name_label, 0, 0, 1, 1)
+        self.gridLayout_3.addWidget(self.update_event_maximum_participants_label, 2, 0, 1, 1)
 
         self.update_event_event_icon_label = QLabel(self.update_event_tab)
         self.update_event_event_icon_label.setObjectName(u"update_event_event_icon_label")
 
-        self.gridLayout_11.addWidget(self.update_event_event_icon_label, 0, 1, 1, 1)
+        self.gridLayout_3.addWidget(self.update_event_event_icon_label, 2, 1, 1, 1)
 
-        self.update_event_event_name_field = QLineEdit(self.update_event_tab)
-        self.update_event_event_name_field.setObjectName(u"update_event_event_name_field")
+        self.update_event_maximum_participants_spinbox = QSpinBox(self.update_event_tab)
+        self.update_event_maximum_participants_spinbox.setObjectName(u"update_event_maximum_participants_spinbox")
 
-        self.gridLayout_11.addWidget(self.update_event_event_name_field, 1, 0, 1, 1)
+        self.gridLayout_3.addWidget(self.update_event_maximum_participants_spinbox, 3, 0, 1, 1)
 
         self.update_event_event_icon_field = QLineEdit(self.update_event_tab)
         self.update_event_event_icon_field.setObjectName(u"update_event_event_icon_field")
 
-        self.gridLayout_11.addWidget(self.update_event_event_icon_field, 1, 1, 1, 1)
+        self.gridLayout_3.addWidget(self.update_event_event_icon_field, 3, 1, 1, 1)
 
         self.update_event_event_tagline_label = QLabel(self.update_event_tab)
         self.update_event_event_tagline_label.setObjectName(u"update_event_event_tagline_label")
 
-        self.gridLayout_11.addWidget(self.update_event_event_tagline_label, 2, 0, 1, 1)
+        self.gridLayout_3.addWidget(self.update_event_event_tagline_label, 4, 0, 1, 1)
 
         self.update_event_event_rules_label = QLabel(self.update_event_tab)
         self.update_event_event_rules_label.setObjectName(u"update_event_event_rules_label")
 
-        self.gridLayout_11.addWidget(self.update_event_event_rules_label, 2, 1, 1, 1)
+        self.gridLayout_3.addWidget(self.update_event_event_rules_label, 4, 1, 1, 1)
 
         self.update_event_event_tagline_field = QTextEdit(self.update_event_tab)
         self.update_event_event_tagline_field.setObjectName(u"update_event_event_tagline_field")
 
-        self.gridLayout_11.addWidget(self.update_event_event_tagline_field, 3, 0, 1, 1)
+        self.gridLayout_3.addWidget(self.update_event_event_tagline_field, 5, 0, 1, 1)
 
         self.update_event_event_rules_field = QTextEdit(self.update_event_tab)
         self.update_event_event_rules_field.setObjectName(u"update_event_event_rules_field")
 
-        self.gridLayout_11.addWidget(self.update_event_event_rules_field, 3, 1, 1, 1)
+        self.gridLayout_3.addWidget(self.update_event_event_rules_field, 5, 1, 1, 1)
 
         self.update_event_event_description_label = QLabel(self.update_event_tab)
         self.update_event_event_description_label.setObjectName(u"update_event_event_description_label")
 
-        self.gridLayout_11.addWidget(self.update_event_event_description_label, 4, 0, 1, 1)
+        self.gridLayout_3.addWidget(self.update_event_event_description_label, 6, 0, 1, 1)
 
         self.update_event_event_heads_label = QLabel(self.update_event_tab)
         self.update_event_event_heads_label.setObjectName(u"update_event_event_heads_label")
 
-        self.gridLayout_11.addWidget(self.update_event_event_heads_label, 4, 1, 1, 1)
+        self.gridLayout_3.addWidget(self.update_event_event_heads_label, 6, 1, 1, 1)
 
         self.update_event_event_description_field = QTextEdit(self.update_event_tab)
         self.update_event_event_description_field.setObjectName(u"update_event_event_description_field")
 
-        self.gridLayout_11.addWidget(self.update_event_event_description_field, 5, 0, 1, 1)
+        self.gridLayout_3.addWidget(self.update_event_event_description_field, 7, 0, 1, 1)
 
         self.update_event_event_heads_field = QTextEdit(self.update_event_tab)
         self.update_event_event_heads_field.setObjectName(u"update_event_event_heads_field")
 
-        self.gridLayout_11.addWidget(self.update_event_event_heads_field, 5, 1, 1, 1)
-
-
-        self.verticalLayout_5.addLayout(self.gridLayout_11)
+        self.gridLayout_3.addWidget(self.update_event_event_heads_field, 7, 1, 1, 1)
 
         self.horizontalLayout_21 = QHBoxLayout()
         self.horizontalLayout_21.setObjectName(u"horizontalLayout_21")
@@ -751,7 +746,7 @@ class Ui_MainWindow(object):
         self.horizontalLayout_21.addItem(self.horizontalSpacer_27)
 
 
-        self.verticalLayout_5.addLayout(self.horizontalLayout_21)
+        self.gridLayout_3.addLayout(self.horizontalLayout_21, 8, 0, 1, 1)
 
         self.main_window_tabs.addTab(self.update_event_tab, "")
         self.event_member_details_tab = QWidget()
@@ -852,7 +847,7 @@ class Ui_MainWindow(object):
 
         self.retranslateUi(MainWindow)
 
-        self.main_window_tabs.setCurrentIndex(0)
+        self.main_window_tabs.setCurrentIndex(2)
 
 
         QMetaObject.connectSlotsByName(MainWindow)
@@ -918,7 +913,7 @@ class Ui_MainWindow(object):
         self.pushButton.setText(QCoreApplication.translate("MainWindow", u"Create Team", None))
         self.main_window_tabs.setTabText(self.main_window_tabs.indexOf(self.on_spot_registration_tab), QCoreApplication.translate("MainWindow", u"On Spot Registration", None))
         self.update_event_event_label.setText(QCoreApplication.translate("MainWindow", u"Event:", None))
-        self.update_event_event_name_label.setText(QCoreApplication.translate("MainWindow", u"Event Name:", None))
+        self.update_event_maximum_participants_label.setText(QCoreApplication.translate("MainWindow", u"Maximum Participants:", None))
         self.update_event_event_icon_label.setText(QCoreApplication.translate("MainWindow", u"Event Icon URL:", None))
         self.update_event_event_tagline_label.setText(QCoreApplication.translate("MainWindow", u"Event Tagline:", None))
         self.update_event_event_rules_label.setText(QCoreApplication.translate("MainWindow", u"Event Rules:", None))
