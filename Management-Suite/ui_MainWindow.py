@@ -1,7 +1,7 @@
 # -*- coding: utf-8 -*-
 
 ################################################################################
-## Form generated from reading UI file 'MainWindowGZlvIh.ui'
+## Form generated from reading UI file 'MainWindowPwyqdj.ui'
 ##
 ## Created by: Qt User Interface Compiler version 6.5.1
 ##
@@ -219,14 +219,10 @@ class Ui_MainWindow(object):
         self.main_window_tabs.addTab(self.mailing_list_tab, "")
         self.on_spot_registration_tab = QWidget()
         self.on_spot_registration_tab.setObjectName(u"on_spot_registration_tab")
-        self.verticalLayout_4 = QVBoxLayout(self.on_spot_registration_tab)
-        self.verticalLayout_4.setObjectName(u"verticalLayout_4")
+        self.verticalLayout_3 = QVBoxLayout(self.on_spot_registration_tab)
+        self.verticalLayout_3.setObjectName(u"verticalLayout_3")
         self.horizontalLayout_9 = QHBoxLayout()
         self.horizontalLayout_9.setObjectName(u"horizontalLayout_9")
-        self.horizontalSpacer_11 = QSpacerItem(40, 20, QSizePolicy.Expanding, QSizePolicy.Minimum)
-
-        self.horizontalLayout_9.addItem(self.horizontalSpacer_11)
-
         self.on_spot_registration_team_name_label = QLabel(self.on_spot_registration_tab)
         self.on_spot_registration_team_name_label.setObjectName(u"on_spot_registration_team_name_label")
 
@@ -247,244 +243,46 @@ class Ui_MainWindow(object):
 
         self.horizontalLayout_9.addWidget(self.on_spot_registration_team_school_field)
 
+
+        self.verticalLayout_3.addLayout(self.horizontalLayout_9)
+
+        self.horizontalLayout_16 = QHBoxLayout()
+        self.horizontalLayout_16.setObjectName(u"horizontalLayout_16")
         self.on_spot_registration_event_label = QLabel(self.on_spot_registration_tab)
         self.on_spot_registration_event_label.setObjectName(u"on_spot_registration_event_label")
 
-        self.horizontalLayout_9.addWidget(self.on_spot_registration_event_label)
+        self.horizontalLayout_16.addWidget(self.on_spot_registration_event_label)
 
         self.on_spot_registration_event_combo_box = QComboBox(self.on_spot_registration_tab)
         self.on_spot_registration_event_combo_box.setObjectName(u"on_spot_registration_event_combo_box")
 
-        self.horizontalLayout_9.addWidget(self.on_spot_registration_event_combo_box)
-
-        self.horizontalSpacer_10 = QSpacerItem(40, 20, QSizePolicy.Expanding, QSizePolicy.Minimum)
-
-        self.horizontalLayout_9.addItem(self.horizontalSpacer_10)
+        self.horizontalLayout_16.addWidget(self.on_spot_registration_event_combo_box)
 
 
-        self.verticalLayout_4.addLayout(self.horizontalLayout_9)
+        self.verticalLayout_3.addLayout(self.horizontalLayout_16)
 
         self.line_3 = QFrame(self.on_spot_registration_tab)
         self.line_3.setObjectName(u"line_3")
         self.line_3.setFrameShape(QFrame.HLine)
         self.line_3.setFrameShadow(QFrame.Sunken)
 
-        self.verticalLayout_4.addWidget(self.line_3)
-
-        self.horizontalLayout_14 = QHBoxLayout()
-        self.horizontalLayout_14.setObjectName(u"horizontalLayout_14")
-        self.horizontalSpacer_17 = QSpacerItem(40, 20, QSizePolicy.Expanding, QSizePolicy.Minimum)
-
-        self.horizontalLayout_14.addItem(self.horizontalSpacer_17)
-
-        self.verticalLayout_3 = QVBoxLayout()
-        self.verticalLayout_3.setObjectName(u"verticalLayout_3")
-        self.horizontalLayout_10 = QHBoxLayout()
-        self.horizontalLayout_10.setObjectName(u"horizontalLayout_10")
-        self.gridLayout_2 = QGridLayout()
-        self.gridLayout_2.setObjectName(u"gridLayout_2")
-        self.on_spot_registration_member_name_label_1 = QLabel(self.on_spot_registration_tab)
-        self.on_spot_registration_member_name_label_1.setObjectName(u"on_spot_registration_member_name_label_1")
-
-        self.gridLayout_2.addWidget(self.on_spot_registration_member_name_label_1, 0, 0, 1, 1)
-
-        self.on_spot_registration_member_name_field_1 = QLineEdit(self.on_spot_registration_tab)
-        self.on_spot_registration_member_name_field_1.setObjectName(u"on_spot_registration_member_name_field_1")
-
-        self.gridLayout_2.addWidget(self.on_spot_registration_member_name_field_1, 0, 1, 1, 1)
-
-        self.on_spot_registration_member_email_label_1 = QLabel(self.on_spot_registration_tab)
-        self.on_spot_registration_member_email_label_1.setObjectName(u"on_spot_registration_member_email_label_1")
-
-        self.gridLayout_2.addWidget(self.on_spot_registration_member_email_label_1, 1, 0, 1, 1)
-
-        self.on_spot_registration_member_email_field_1 = QLineEdit(self.on_spot_registration_tab)
-        self.on_spot_registration_member_email_field_1.setObjectName(u"on_spot_registration_member_email_field_1")
-
-        self.gridLayout_2.addWidget(self.on_spot_registration_member_email_field_1, 1, 1, 1, 1)
-
-        self.on_spot_registration_member_phone_label_1 = QLabel(self.on_spot_registration_tab)
-        self.on_spot_registration_member_phone_label_1.setObjectName(u"on_spot_registration_member_phone_label_1")
-
-        self.gridLayout_2.addWidget(self.on_spot_registration_member_phone_label_1, 2, 0, 1, 1)
-
-        self.on_spot_registration_member_phone_field_1 = QLineEdit(self.on_spot_registration_tab)
-        self.on_spot_registration_member_phone_field_1.setObjectName(u"on_spot_registration_member_phone_field_1")
-
-        self.gridLayout_2.addWidget(self.on_spot_registration_member_phone_field_1, 2, 1, 1, 1)
-
-
-        self.horizontalLayout_10.addLayout(self.gridLayout_2)
-
-        self.horizontalSpacer_12 = QSpacerItem(40, 20, QSizePolicy.Expanding, QSizePolicy.Minimum)
-
-        self.horizontalLayout_10.addItem(self.horizontalSpacer_12)
-
-        self.gridLayout_4 = QGridLayout()
-        self.gridLayout_4.setObjectName(u"gridLayout_4")
-        self.on_spot_registration_member_name_field_2 = QLineEdit(self.on_spot_registration_tab)
-        self.on_spot_registration_member_name_field_2.setObjectName(u"on_spot_registration_member_name_field_2")
-
-        self.gridLayout_4.addWidget(self.on_spot_registration_member_name_field_2, 0, 1, 1, 1)
-
-        self.on_spot_registration_member_name_label_2 = QLabel(self.on_spot_registration_tab)
-        self.on_spot_registration_member_name_label_2.setObjectName(u"on_spot_registration_member_name_label_2")
-
-        self.gridLayout_4.addWidget(self.on_spot_registration_member_name_label_2, 0, 0, 1, 1)
-
-        self.on_spot_registration_member_phone_field_2 = QLineEdit(self.on_spot_registration_tab)
-        self.on_spot_registration_member_phone_field_2.setObjectName(u"on_spot_registration_member_phone_field_2")
-
-        self.gridLayout_4.addWidget(self.on_spot_registration_member_phone_field_2, 2, 1, 1, 1)
-
-        self.on_spot_registration_member_phone_label_2 = QLabel(self.on_spot_registration_tab)
-        self.on_spot_registration_member_phone_label_2.setObjectName(u"on_spot_registration_member_phone_label_2")
-
-        self.gridLayout_4.addWidget(self.on_spot_registration_member_phone_label_2, 2, 0, 1, 1)
-
-        self.on_spot_registration_member_email_label_2 = QLabel(self.on_spot_registration_tab)
-        self.on_spot_registration_member_email_label_2.setObjectName(u"on_spot_registration_member_email_label_2")
-
-        self.gridLayout_4.addWidget(self.on_spot_registration_member_email_label_2, 1, 0, 1, 1)
-
-        self.on_spot_registration_member_email_field_2 = QLineEdit(self.on_spot_registration_tab)
-        self.on_spot_registration_member_email_field_2.setObjectName(u"on_spot_registration_member_email_field_2")
-
-        self.gridLayout_4.addWidget(self.on_spot_registration_member_email_field_2, 1, 1, 1, 1)
-
-
-        self.horizontalLayout_10.addLayout(self.gridLayout_4)
-
-
-        self.verticalLayout_3.addLayout(self.horizontalLayout_10)
-
-        self.verticalSpacer = QSpacerItem(20, 40, QSizePolicy.Minimum, QSizePolicy.Expanding)
-
-        self.verticalLayout_3.addItem(self.verticalSpacer)
-
-        self.horizontalLayout_11 = QHBoxLayout()
-        self.horizontalLayout_11.setObjectName(u"horizontalLayout_11")
-        self.gridLayout_5 = QGridLayout()
-        self.gridLayout_5.setObjectName(u"gridLayout_5")
-        self.on_spot_registration_member_name_label_3 = QLabel(self.on_spot_registration_tab)
-        self.on_spot_registration_member_name_label_3.setObjectName(u"on_spot_registration_member_name_label_3")
-
-        self.gridLayout_5.addWidget(self.on_spot_registration_member_name_label_3, 0, 0, 1, 1)
-
-        self.on_spot_registration_member_name_field_3 = QLineEdit(self.on_spot_registration_tab)
-        self.on_spot_registration_member_name_field_3.setObjectName(u"on_spot_registration_member_name_field_3")
-
-        self.gridLayout_5.addWidget(self.on_spot_registration_member_name_field_3, 0, 1, 1, 1)
-
-        self.on_spot_registration_member_email_label_3 = QLabel(self.on_spot_registration_tab)
-        self.on_spot_registration_member_email_label_3.setObjectName(u"on_spot_registration_member_email_label_3")
-
-        self.gridLayout_5.addWidget(self.on_spot_registration_member_email_label_3, 1, 0, 1, 1)
-
-        self.on_spot_registration_member_email_field_3 = QLineEdit(self.on_spot_registration_tab)
-        self.on_spot_registration_member_email_field_3.setObjectName(u"on_spot_registration_member_email_field_3")
-
-        self.gridLayout_5.addWidget(self.on_spot_registration_member_email_field_3, 1, 1, 1, 1)
-
-        self.on_spot_registration_member_phone_label_3 = QLabel(self.on_spot_registration_tab)
-        self.on_spot_registration_member_phone_label_3.setObjectName(u"on_spot_registration_member_phone_label_3")
-
-        self.gridLayout_5.addWidget(self.on_spot_registration_member_phone_label_3, 2, 0, 1, 1)
-
-        self.on_spot_registration_member_phone_field_3 = QLineEdit(self.on_spot_registration_tab)
-        self.on_spot_registration_member_phone_field_3.setObjectName(u"on_spot_registration_member_phone_field_3")
-
-        self.gridLayout_5.addWidget(self.on_spot_registration_member_phone_field_3, 2, 1, 1, 1)
-
-
-        self.horizontalLayout_11.addLayout(self.gridLayout_5)
-
-        self.horizontalSpacer_13 = QSpacerItem(40, 20, QSizePolicy.Expanding, QSizePolicy.Minimum)
-
-        self.horizontalLayout_11.addItem(self.horizontalSpacer_13)
-
-        self.gridLayout_6 = QGridLayout()
-        self.gridLayout_6.setObjectName(u"gridLayout_6")
-        self.on_spot_registration_member_name_label_4 = QLabel(self.on_spot_registration_tab)
-        self.on_spot_registration_member_name_label_4.setObjectName(u"on_spot_registration_member_name_label_4")
-
-        self.gridLayout_6.addWidget(self.on_spot_registration_member_name_label_4, 0, 0, 1, 1)
-
-        self.on_spot_registration_member_name_field_4 = QLineEdit(self.on_spot_registration_tab)
-        self.on_spot_registration_member_name_field_4.setObjectName(u"on_spot_registration_member_name_field_4")
-
-        self.gridLayout_6.addWidget(self.on_spot_registration_member_name_field_4, 0, 1, 1, 1)
-
-        self.on_spot_registration_member_email_label_4 = QLabel(self.on_spot_registration_tab)
-        self.on_spot_registration_member_email_label_4.setObjectName(u"on_spot_registration_member_email_label_4")
-
-        self.gridLayout_6.addWidget(self.on_spot_registration_member_email_label_4, 1, 0, 1, 1)
-
-        self.on_spot_registration_member_email_field_4 = QLineEdit(self.on_spot_registration_tab)
-        self.on_spot_registration_member_email_field_4.setObjectName(u"on_spot_registration_member_email_field_4")
-
-        self.gridLayout_6.addWidget(self.on_spot_registration_member_email_field_4, 1, 1, 1, 1)
-
-        self.on_spot_registration_member_phone_label_4 = QLabel(self.on_spot_registration_tab)
-        self.on_spot_registration_member_phone_label_4.setObjectName(u"on_spot_registration_member_phone_label_4")
-
-        self.gridLayout_6.addWidget(self.on_spot_registration_member_phone_label_4, 2, 0, 1, 1)
-
-        self.on_spot_registration_member_phone_field_4 = QLineEdit(self.on_spot_registration_tab)
-        self.on_spot_registration_member_phone_field_4.setObjectName(u"on_spot_registration_member_phone_field_4")
-
-        self.gridLayout_6.addWidget(self.on_spot_registration_member_phone_field_4, 2, 1, 1, 1)
-
-
-        self.horizontalLayout_11.addLayout(self.gridLayout_6)
-
-
-        self.verticalLayout_3.addLayout(self.horizontalLayout_11)
-
-        self.verticalSpacer_6 = QSpacerItem(20, 40, QSizePolicy.Minimum, QSizePolicy.Expanding)
-
-        self.verticalLayout_3.addItem(self.verticalSpacer_6)
-
-        self.horizontalLayout_12 = QHBoxLayout()
-        self.horizontalLayout_12.setObjectName(u"horizontalLayout_12")
-        self.gridLayout_7 = QGridLayout()
-        self.gridLayout_7.setObjectName(u"gridLayout_7")
-        self.on_spot_registration_member_name_label_5 = QLabel(self.on_spot_registration_tab)
-        self.on_spot_registration_member_name_label_5.setObjectName(u"on_spot_registration_member_name_label_5")
-
-        self.gridLayout_7.addWidget(self.on_spot_registration_member_name_label_5, 0, 0, 1, 1)
-
-        self.on_spot_registration_member_name_field_5 = QLineEdit(self.on_spot_registration_tab)
-        self.on_spot_registration_member_name_field_5.setObjectName(u"on_spot_registration_member_name_field_5")
-
-        self.gridLayout_7.addWidget(self.on_spot_registration_member_name_field_5, 0, 1, 1, 1)
-
-        self.on_spot_registration_member_email_label_5 = QLabel(self.on_spot_registration_tab)
-        self.on_spot_registration_member_email_label_5.setObjectName(u"on_spot_registration_member_email_label_5")
-
-        self.gridLayout_7.addWidget(self.on_spot_registration_member_email_label_5, 1, 0, 1, 1)
-
-        self.on_spot_registration_member_email_field_5 = QLineEdit(self.on_spot_registration_tab)
-        self.on_spot_registration_member_email_field_5.setObjectName(u"on_spot_registration_member_email_field_5")
-
-        self.gridLayout_7.addWidget(self.on_spot_registration_member_email_field_5, 1, 1, 1, 1)
-
-        self.on_spot_registration_member_phone_label_5 = QLabel(self.on_spot_registration_tab)
-        self.on_spot_registration_member_phone_label_5.setObjectName(u"on_spot_registration_member_phone_label_5")
-
-        self.gridLayout_7.addWidget(self.on_spot_registration_member_phone_label_5, 2, 0, 1, 1)
-
-        self.on_spot_registration_member_phone_field_5 = QLineEdit(self.on_spot_registration_tab)
-        self.on_spot_registration_member_phone_field_5.setObjectName(u"on_spot_registration_member_phone_field_5")
-
-        self.gridLayout_7.addWidget(self.on_spot_registration_member_phone_field_5, 2, 1, 1, 1)
-
-
-        self.horizontalLayout_12.addLayout(self.gridLayout_7)
-
-        self.horizontalSpacer_14 = QSpacerItem(40, 20, QSizePolicy.Expanding, QSizePolicy.Minimum)
-
-        self.horizontalLayout_12.addItem(self.horizontalSpacer_14)
+        self.verticalLayout_3.addWidget(self.line_3)
+
+        self.gridLayout_11 = QGridLayout()
+        self.gridLayout_11.setObjectName(u"gridLayout_11")
+        self.line_7 = QFrame(self.on_spot_registration_tab)
+        self.line_7.setObjectName(u"line_7")
+        self.line_7.setFrameShape(QFrame.VLine)
+        self.line_7.setFrameShadow(QFrame.Sunken)
+
+        self.gridLayout_11.addWidget(self.line_7, 0, 1, 1, 1)
+
+        self.line_5 = QFrame(self.on_spot_registration_tab)
+        self.line_5.setObjectName(u"line_5")
+        self.line_5.setFrameShape(QFrame.HLine)
+        self.line_5.setFrameShadow(QFrame.Sunken)
+
+        self.gridLayout_11.addWidget(self.line_5, 1, 0, 1, 1)
 
         self.gridLayout_8 = QGridLayout()
         self.gridLayout_8.setObjectName(u"gridLayout_8")
@@ -519,17 +317,43 @@ class Ui_MainWindow(object):
         self.gridLayout_8.addWidget(self.on_spot_registration_member_phone_field_6, 2, 1, 1, 1)
 
 
-        self.horizontalLayout_12.addLayout(self.gridLayout_8)
+        self.gridLayout_11.addLayout(self.gridLayout_8, 4, 2, 1, 1)
 
+        self.line_10 = QFrame(self.on_spot_registration_tab)
+        self.line_10.setObjectName(u"line_10")
+        self.line_10.setFrameShape(QFrame.VLine)
+        self.line_10.setFrameShadow(QFrame.Sunken)
 
-        self.verticalLayout_3.addLayout(self.horizontalLayout_12)
+        self.gridLayout_11.addWidget(self.line_10, 6, 1, 1, 1)
 
-        self.verticalSpacer_5 = QSpacerItem(20, 40, QSizePolicy.Minimum, QSizePolicy.Expanding)
+        self.line_11 = QFrame(self.on_spot_registration_tab)
+        self.line_11.setObjectName(u"line_11")
+        self.line_11.setFrameShape(QFrame.HLine)
+        self.line_11.setFrameShadow(QFrame.Sunken)
 
-        self.verticalLayout_3.addItem(self.verticalSpacer_5)
+        self.gridLayout_11.addWidget(self.line_11, 3, 0, 1, 1)
 
-        self.horizontalLayout_13 = QHBoxLayout()
-        self.horizontalLayout_13.setObjectName(u"horizontalLayout_13")
+        self.line_8 = QFrame(self.on_spot_registration_tab)
+        self.line_8.setObjectName(u"line_8")
+        self.line_8.setFrameShape(QFrame.VLine)
+        self.line_8.setFrameShadow(QFrame.Sunken)
+
+        self.gridLayout_11.addWidget(self.line_8, 2, 1, 1, 1)
+
+        self.line_6 = QFrame(self.on_spot_registration_tab)
+        self.line_6.setObjectName(u"line_6")
+        self.line_6.setFrameShape(QFrame.HLine)
+        self.line_6.setFrameShadow(QFrame.Sunken)
+
+        self.gridLayout_11.addWidget(self.line_6, 1, 2, 1, 1)
+
+        self.line_9 = QFrame(self.on_spot_registration_tab)
+        self.line_9.setObjectName(u"line_9")
+        self.line_9.setFrameShape(QFrame.VLine)
+        self.line_9.setFrameShadow(QFrame.Sunken)
+
+        self.gridLayout_11.addWidget(self.line_9, 4, 1, 1, 1)
+
         self.gridLayout_9 = QGridLayout()
         self.gridLayout_9.setObjectName(u"gridLayout_9")
         self.on_spot_registration_member_name_label_7 = QLabel(self.on_spot_registration_tab)
@@ -563,11 +387,77 @@ class Ui_MainWindow(object):
         self.gridLayout_9.addWidget(self.on_spot_registration_member_phone_field_7, 2, 1, 1, 1)
 
 
-        self.horizontalLayout_13.addLayout(self.gridLayout_9)
+        self.gridLayout_11.addLayout(self.gridLayout_9, 6, 0, 1, 1)
 
-        self.horizontalSpacer_15 = QSpacerItem(40, 20, QSizePolicy.Expanding, QSizePolicy.Minimum)
+        self.gridLayout_6 = QGridLayout()
+        self.gridLayout_6.setObjectName(u"gridLayout_6")
+        self.on_spot_registration_member_name_label_4 = QLabel(self.on_spot_registration_tab)
+        self.on_spot_registration_member_name_label_4.setObjectName(u"on_spot_registration_member_name_label_4")
 
-        self.horizontalLayout_13.addItem(self.horizontalSpacer_15)
+        self.gridLayout_6.addWidget(self.on_spot_registration_member_name_label_4, 0, 0, 1, 1)
+
+        self.on_spot_registration_member_name_field_4 = QLineEdit(self.on_spot_registration_tab)
+        self.on_spot_registration_member_name_field_4.setObjectName(u"on_spot_registration_member_name_field_4")
+
+        self.gridLayout_6.addWidget(self.on_spot_registration_member_name_field_4, 0, 1, 1, 1)
+
+        self.on_spot_registration_member_email_label_4 = QLabel(self.on_spot_registration_tab)
+        self.on_spot_registration_member_email_label_4.setObjectName(u"on_spot_registration_member_email_label_4")
+
+        self.gridLayout_6.addWidget(self.on_spot_registration_member_email_label_4, 1, 0, 1, 1)
+
+        self.on_spot_registration_member_email_field_4 = QLineEdit(self.on_spot_registration_tab)
+        self.on_spot_registration_member_email_field_4.setObjectName(u"on_spot_registration_member_email_field_4")
+
+        self.gridLayout_6.addWidget(self.on_spot_registration_member_email_field_4, 1, 1, 1, 1)
+
+        self.on_spot_registration_member_phone_label_4 = QLabel(self.on_spot_registration_tab)
+        self.on_spot_registration_member_phone_label_4.setObjectName(u"on_spot_registration_member_phone_label_4")
+
+        self.gridLayout_6.addWidget(self.on_spot_registration_member_phone_label_4, 2, 0, 1, 1)
+
+        self.on_spot_registration_member_phone_field_4 = QLineEdit(self.on_spot_registration_tab)
+        self.on_spot_registration_member_phone_field_4.setObjectName(u"on_spot_registration_member_phone_field_4")
+
+        self.gridLayout_6.addWidget(self.on_spot_registration_member_phone_field_4, 2, 1, 1, 1)
+
+
+        self.gridLayout_11.addLayout(self.gridLayout_6, 2, 2, 1, 1)
+
+        self.gridLayout_7 = QGridLayout()
+        self.gridLayout_7.setObjectName(u"gridLayout_7")
+        self.on_spot_registration_member_name_label_5 = QLabel(self.on_spot_registration_tab)
+        self.on_spot_registration_member_name_label_5.setObjectName(u"on_spot_registration_member_name_label_5")
+
+        self.gridLayout_7.addWidget(self.on_spot_registration_member_name_label_5, 0, 0, 1, 1)
+
+        self.on_spot_registration_member_name_field_5 = QLineEdit(self.on_spot_registration_tab)
+        self.on_spot_registration_member_name_field_5.setObjectName(u"on_spot_registration_member_name_field_5")
+
+        self.gridLayout_7.addWidget(self.on_spot_registration_member_name_field_5, 0, 1, 1, 1)
+
+        self.on_spot_registration_member_email_label_5 = QLabel(self.on_spot_registration_tab)
+        self.on_spot_registration_member_email_label_5.setObjectName(u"on_spot_registration_member_email_label_5")
+
+        self.gridLayout_7.addWidget(self.on_spot_registration_member_email_label_5, 1, 0, 1, 1)
+
+        self.on_spot_registration_member_email_field_5 = QLineEdit(self.on_spot_registration_tab)
+        self.on_spot_registration_member_email_field_5.setObjectName(u"on_spot_registration_member_email_field_5")
+
+        self.gridLayout_7.addWidget(self.on_spot_registration_member_email_field_5, 1, 1, 1, 1)
+
+        self.on_spot_registration_member_phone_label_5 = QLabel(self.on_spot_registration_tab)
+        self.on_spot_registration_member_phone_label_5.setObjectName(u"on_spot_registration_member_phone_label_5")
+
+        self.gridLayout_7.addWidget(self.on_spot_registration_member_phone_label_5, 2, 0, 1, 1)
+
+        self.on_spot_registration_member_phone_field_5 = QLineEdit(self.on_spot_registration_tab)
+        self.on_spot_registration_member_phone_field_5.setObjectName(u"on_spot_registration_member_phone_field_5")
+
+        self.gridLayout_7.addWidget(self.on_spot_registration_member_phone_field_5, 2, 1, 1, 1)
+
+
+        self.gridLayout_11.addLayout(self.gridLayout_7, 4, 0, 1, 1)
 
         self.gridLayout_10 = QGridLayout()
         self.gridLayout_10.setObjectName(u"gridLayout_10")
@@ -575,11 +465,6 @@ class Ui_MainWindow(object):
         self.on_spot_registration_member_name_label_8.setObjectName(u"on_spot_registration_member_name_label_8")
 
         self.gridLayout_10.addWidget(self.on_spot_registration_member_name_label_8, 0, 0, 1, 1)
-
-        self.on_spot_registration_member_name_field_8 = QLineEdit(self.on_spot_registration_tab)
-        self.on_spot_registration_member_name_field_8.setObjectName(u"on_spot_registration_member_name_field_8")
-
-        self.gridLayout_10.addWidget(self.on_spot_registration_member_name_field_8, 0, 1, 1, 1)
 
         self.on_spot_registration_member_email_label_8 = QLabel(self.on_spot_registration_tab)
         self.on_spot_registration_member_email_label_8.setObjectName(u"on_spot_registration_member_email_label_8")
@@ -601,21 +486,149 @@ class Ui_MainWindow(object):
 
         self.gridLayout_10.addWidget(self.on_spot_registration_member_phone_field_8, 2, 1, 1, 1)
 
+        self.on_spot_registration_member_name_field_8 = QLineEdit(self.on_spot_registration_tab)
+        self.on_spot_registration_member_name_field_8.setObjectName(u"on_spot_registration_member_name_field_8")
 
-        self.horizontalLayout_13.addLayout(self.gridLayout_10)
-
-
-        self.verticalLayout_3.addLayout(self.horizontalLayout_13)
-
-
-        self.horizontalLayout_14.addLayout(self.verticalLayout_3)
-
-        self.horizontalSpacer_16 = QSpacerItem(40, 20, QSizePolicy.Expanding, QSizePolicy.Minimum)
-
-        self.horizontalLayout_14.addItem(self.horizontalSpacer_16)
+        self.gridLayout_10.addWidget(self.on_spot_registration_member_name_field_8, 0, 1, 1, 1)
 
 
-        self.verticalLayout_4.addLayout(self.horizontalLayout_14)
+        self.gridLayout_11.addLayout(self.gridLayout_10, 6, 2, 1, 1)
+
+        self.gridLayout_2 = QGridLayout()
+        self.gridLayout_2.setObjectName(u"gridLayout_2")
+        self.on_spot_registration_member_name_label_1 = QLabel(self.on_spot_registration_tab)
+        self.on_spot_registration_member_name_label_1.setObjectName(u"on_spot_registration_member_name_label_1")
+
+        self.gridLayout_2.addWidget(self.on_spot_registration_member_name_label_1, 0, 0, 1, 1)
+
+        self.on_spot_registration_member_name_field_1 = QLineEdit(self.on_spot_registration_tab)
+        self.on_spot_registration_member_name_field_1.setObjectName(u"on_spot_registration_member_name_field_1")
+
+        self.gridLayout_2.addWidget(self.on_spot_registration_member_name_field_1, 0, 1, 1, 1)
+
+        self.on_spot_registration_member_email_label_1 = QLabel(self.on_spot_registration_tab)
+        self.on_spot_registration_member_email_label_1.setObjectName(u"on_spot_registration_member_email_label_1")
+
+        self.gridLayout_2.addWidget(self.on_spot_registration_member_email_label_1, 1, 0, 1, 1)
+
+        self.on_spot_registration_member_email_field_1 = QLineEdit(self.on_spot_registration_tab)
+        self.on_spot_registration_member_email_field_1.setObjectName(u"on_spot_registration_member_email_field_1")
+
+        self.gridLayout_2.addWidget(self.on_spot_registration_member_email_field_1, 1, 1, 1, 1)
+
+        self.on_spot_registration_member_phone_label_1 = QLabel(self.on_spot_registration_tab)
+        self.on_spot_registration_member_phone_label_1.setObjectName(u"on_spot_registration_member_phone_label_1")
+
+        self.gridLayout_2.addWidget(self.on_spot_registration_member_phone_label_1, 2, 0, 1, 1)
+
+        self.on_spot_registration_member_phone_field_1 = QLineEdit(self.on_spot_registration_tab)
+        self.on_spot_registration_member_phone_field_1.setObjectName(u"on_spot_registration_member_phone_field_1")
+
+        self.gridLayout_2.addWidget(self.on_spot_registration_member_phone_field_1, 2, 1, 1, 1)
+
+
+        self.gridLayout_11.addLayout(self.gridLayout_2, 0, 0, 1, 1)
+
+        self.gridLayout_4 = QGridLayout()
+        self.gridLayout_4.setObjectName(u"gridLayout_4")
+        self.on_spot_registration_member_name_field_2 = QLineEdit(self.on_spot_registration_tab)
+        self.on_spot_registration_member_name_field_2.setObjectName(u"on_spot_registration_member_name_field_2")
+
+        self.gridLayout_4.addWidget(self.on_spot_registration_member_name_field_2, 0, 1, 1, 1)
+
+        self.on_spot_registration_member_name_label_2 = QLabel(self.on_spot_registration_tab)
+        self.on_spot_registration_member_name_label_2.setObjectName(u"on_spot_registration_member_name_label_2")
+
+        self.gridLayout_4.addWidget(self.on_spot_registration_member_name_label_2, 0, 0, 1, 1)
+
+        self.on_spot_registration_member_phone_field_2 = QLineEdit(self.on_spot_registration_tab)
+        self.on_spot_registration_member_phone_field_2.setObjectName(u"on_spot_registration_member_phone_field_2")
+
+        self.gridLayout_4.addWidget(self.on_spot_registration_member_phone_field_2, 2, 1, 1, 1)
+
+        self.on_spot_registration_member_phone_label_2 = QLabel(self.on_spot_registration_tab)
+        self.on_spot_registration_member_phone_label_2.setObjectName(u"on_spot_registration_member_phone_label_2")
+
+        self.gridLayout_4.addWidget(self.on_spot_registration_member_phone_label_2, 2, 0, 1, 1)
+
+        self.on_spot_registration_member_email_label_2 = QLabel(self.on_spot_registration_tab)
+        self.on_spot_registration_member_email_label_2.setObjectName(u"on_spot_registration_member_email_label_2")
+
+        self.gridLayout_4.addWidget(self.on_spot_registration_member_email_label_2, 1, 0, 1, 1)
+
+        self.on_spot_registration_member_email_field_2 = QLineEdit(self.on_spot_registration_tab)
+        self.on_spot_registration_member_email_field_2.setObjectName(u"on_spot_registration_member_email_field_2")
+
+        self.gridLayout_4.addWidget(self.on_spot_registration_member_email_field_2, 1, 1, 1, 1)
+
+
+        self.gridLayout_11.addLayout(self.gridLayout_4, 0, 2, 1, 1)
+
+        self.gridLayout_5 = QGridLayout()
+        self.gridLayout_5.setObjectName(u"gridLayout_5")
+        self.on_spot_registration_member_phone_field_3 = QLineEdit(self.on_spot_registration_tab)
+        self.on_spot_registration_member_phone_field_3.setObjectName(u"on_spot_registration_member_phone_field_3")
+
+        self.gridLayout_5.addWidget(self.on_spot_registration_member_phone_field_3, 2, 1, 1, 1)
+
+        self.on_spot_registration_member_email_label_3 = QLabel(self.on_spot_registration_tab)
+        self.on_spot_registration_member_email_label_3.setObjectName(u"on_spot_registration_member_email_label_3")
+
+        self.gridLayout_5.addWidget(self.on_spot_registration_member_email_label_3, 1, 0, 1, 1)
+
+        self.on_spot_registration_member_phone_label_3 = QLabel(self.on_spot_registration_tab)
+        self.on_spot_registration_member_phone_label_3.setObjectName(u"on_spot_registration_member_phone_label_3")
+
+        self.gridLayout_5.addWidget(self.on_spot_registration_member_phone_label_3, 2, 0, 1, 1)
+
+        self.on_spot_registration_member_name_label_3 = QLabel(self.on_spot_registration_tab)
+        self.on_spot_registration_member_name_label_3.setObjectName(u"on_spot_registration_member_name_label_3")
+
+        self.gridLayout_5.addWidget(self.on_spot_registration_member_name_label_3, 0, 0, 1, 1)
+
+        self.on_spot_registration_member_email_field_3 = QLineEdit(self.on_spot_registration_tab)
+        self.on_spot_registration_member_email_field_3.setObjectName(u"on_spot_registration_member_email_field_3")
+
+        self.gridLayout_5.addWidget(self.on_spot_registration_member_email_field_3, 1, 1, 1, 1)
+
+        self.on_spot_registration_member_name_field_3 = QLineEdit(self.on_spot_registration_tab)
+        self.on_spot_registration_member_name_field_3.setObjectName(u"on_spot_registration_member_name_field_3")
+
+        self.gridLayout_5.addWidget(self.on_spot_registration_member_name_field_3, 0, 1, 1, 1)
+
+
+        self.gridLayout_11.addLayout(self.gridLayout_5, 2, 0, 1, 1)
+
+        self.line_12 = QFrame(self.on_spot_registration_tab)
+        self.line_12.setObjectName(u"line_12")
+        self.line_12.setFrameShape(QFrame.HLine)
+        self.line_12.setFrameShadow(QFrame.Sunken)
+
+        self.gridLayout_11.addWidget(self.line_12, 3, 2, 1, 1)
+
+        self.line_13 = QFrame(self.on_spot_registration_tab)
+        self.line_13.setObjectName(u"line_13")
+        self.line_13.setFrameShape(QFrame.HLine)
+        self.line_13.setFrameShadow(QFrame.Sunken)
+
+        self.gridLayout_11.addWidget(self.line_13, 5, 0, 1, 1)
+
+        self.line_14 = QFrame(self.on_spot_registration_tab)
+        self.line_14.setObjectName(u"line_14")
+        self.line_14.setFrameShape(QFrame.HLine)
+        self.line_14.setFrameShadow(QFrame.Sunken)
+
+        self.gridLayout_11.addWidget(self.line_14, 5, 2, 1, 1)
+
+
+        self.verticalLayout_3.addLayout(self.gridLayout_11)
+
+        self.line_15 = QFrame(self.on_spot_registration_tab)
+        self.line_15.setObjectName(u"line_15")
+        self.line_15.setFrameShape(QFrame.HLine)
+        self.line_15.setFrameShadow(QFrame.Sunken)
+
+        self.verticalLayout_3.addWidget(self.line_15)
 
         self.horizontalLayout_15 = QHBoxLayout()
         self.horizontalLayout_15.setObjectName(u"horizontalLayout_15")
@@ -623,17 +636,17 @@ class Ui_MainWindow(object):
 
         self.horizontalLayout_15.addItem(self.horizontalSpacer_18)
 
-        self.pushButton = QPushButton(self.on_spot_registration_tab)
-        self.pushButton.setObjectName(u"pushButton")
+        self.on_spot_registration_create_team_button = QPushButton(self.on_spot_registration_tab)
+        self.on_spot_registration_create_team_button.setObjectName(u"on_spot_registration_create_team_button")
 
-        self.horizontalLayout_15.addWidget(self.pushButton)
+        self.horizontalLayout_15.addWidget(self.on_spot_registration_create_team_button)
 
         self.horizontalSpacer_19 = QSpacerItem(40, 20, QSizePolicy.Expanding, QSizePolicy.Minimum)
 
         self.horizontalLayout_15.addItem(self.horizontalSpacer_19)
 
 
-        self.verticalLayout_4.addLayout(self.horizontalLayout_15)
+        self.verticalLayout_3.addLayout(self.horizontalLayout_15)
 
         self.main_window_tabs.addTab(self.on_spot_registration_tab, "")
         self.update_event_tab = QWidget()
@@ -642,10 +655,6 @@ class Ui_MainWindow(object):
         self.gridLayout_3.setObjectName(u"gridLayout_3")
         self.horizontalLayout_17 = QHBoxLayout()
         self.horizontalLayout_17.setObjectName(u"horizontalLayout_17")
-        self.horizontalSpacer_23 = QSpacerItem(40, 20, QSizePolicy.Expanding, QSizePolicy.Minimum)
-
-        self.horizontalLayout_17.addItem(self.horizontalSpacer_23)
-
         self.update_event_event_label = QLabel(self.update_event_tab)
         self.update_event_event_label.setObjectName(u"update_event_event_label")
 
@@ -655,10 +664,6 @@ class Ui_MainWindow(object):
         self.update_event_combo_box.setObjectName(u"update_event_combo_box")
 
         self.horizontalLayout_17.addWidget(self.update_event_combo_box)
-
-        self.horizontalSpacer_22 = QSpacerItem(40, 20, QSizePolicy.Expanding, QSizePolicy.Minimum)
-
-        self.horizontalLayout_17.addItem(self.horizontalSpacer_22)
 
 
         self.gridLayout_3.addLayout(self.horizontalLayout_17, 0, 0, 1, 2)
@@ -755,10 +760,6 @@ class Ui_MainWindow(object):
         self.verticalLayout_7.setObjectName(u"verticalLayout_7")
         self.horizontalLayout_18 = QHBoxLayout()
         self.horizontalLayout_18.setObjectName(u"horizontalLayout_18")
-        self.horizontalSpacer_24 = QSpacerItem(40, 20, QSizePolicy.Expanding, QSizePolicy.Minimum)
-
-        self.horizontalLayout_18.addItem(self.horizontalSpacer_24)
-
         self.event_member_details_event_label = QLabel(self.event_member_details_tab)
         self.event_member_details_event_label.setObjectName(u"event_member_details_event_label")
 
@@ -768,10 +769,6 @@ class Ui_MainWindow(object):
         self.event_member_details_combo_box.setObjectName(u"event_member_details_combo_box")
 
         self.horizontalLayout_18.addWidget(self.event_member_details_combo_box)
-
-        self.horizontalSpacer_25 = QSpacerItem(40, 20, QSizePolicy.Expanding, QSizePolicy.Minimum)
-
-        self.horizontalLayout_18.addItem(self.horizontalSpacer_25)
 
 
         self.verticalLayout_7.addLayout(self.horizontalLayout_18)
@@ -847,7 +844,7 @@ class Ui_MainWindow(object):
 
         self.retranslateUi(MainWindow)
 
-        self.main_window_tabs.setCurrentIndex(2)
+        self.main_window_tabs.setCurrentIndex(1)
 
 
         QMetaObject.connectSlotsByName(MainWindow)
@@ -870,31 +867,6 @@ class Ui_MainWindow(object):
         self.on_spot_registration_team_name_label.setText(QCoreApplication.translate("MainWindow", u"Team Name:", None))
         self.on_spot_registration_team_school_label.setText(QCoreApplication.translate("MainWindow", u"Team School:", None))
         self.on_spot_registration_event_label.setText(QCoreApplication.translate("MainWindow", u"Event:", None))
-        self.on_spot_registration_member_name_label_1.setText(QCoreApplication.translate("MainWindow", u"Member Name 1:", None))
-        self.on_spot_registration_member_email_label_1.setText(QCoreApplication.translate("MainWindow", u"Member Email 1:", None))
-        self.on_spot_registration_member_email_field_1.setText("")
-        self.on_spot_registration_member_phone_label_1.setText(QCoreApplication.translate("MainWindow", u"Member Phone 1:", None))
-        self.on_spot_registration_member_phone_field_1.setText("")
-        self.on_spot_registration_member_name_label_2.setText(QCoreApplication.translate("MainWindow", u"Member Name 2:", None))
-        self.on_spot_registration_member_phone_field_2.setText("")
-        self.on_spot_registration_member_phone_label_2.setText(QCoreApplication.translate("MainWindow", u"Member Phone 2:", None))
-        self.on_spot_registration_member_email_label_2.setText(QCoreApplication.translate("MainWindow", u"Member Email 2:", None))
-        self.on_spot_registration_member_email_field_2.setText("")
-        self.on_spot_registration_member_name_label_3.setText(QCoreApplication.translate("MainWindow", u"Member Name 3:", None))
-        self.on_spot_registration_member_email_label_3.setText(QCoreApplication.translate("MainWindow", u"Member Email 3:", None))
-        self.on_spot_registration_member_email_field_3.setText("")
-        self.on_spot_registration_member_phone_label_3.setText(QCoreApplication.translate("MainWindow", u"Member Phone 3:", None))
-        self.on_spot_registration_member_phone_field_3.setText("")
-        self.on_spot_registration_member_name_label_4.setText(QCoreApplication.translate("MainWindow", u"Member Name 4:", None))
-        self.on_spot_registration_member_email_label_4.setText(QCoreApplication.translate("MainWindow", u"Member Email 4:", None))
-        self.on_spot_registration_member_email_field_4.setText("")
-        self.on_spot_registration_member_phone_label_4.setText(QCoreApplication.translate("MainWindow", u"Member Phone 4:", None))
-        self.on_spot_registration_member_phone_field_4.setText("")
-        self.on_spot_registration_member_name_label_5.setText(QCoreApplication.translate("MainWindow", u"Member Name 5:", None))
-        self.on_spot_registration_member_email_label_5.setText(QCoreApplication.translate("MainWindow", u"Member Email 5:", None))
-        self.on_spot_registration_member_email_field_5.setText("")
-        self.on_spot_registration_member_phone_label_5.setText(QCoreApplication.translate("MainWindow", u"Member Phone 5:", None))
-        self.on_spot_registration_member_phone_field_5.setText("")
         self.on_spot_registration_member_name_label_6.setText(QCoreApplication.translate("MainWindow", u"Member Name 6:", None))
         self.on_spot_registration_member_email_label_6.setText(QCoreApplication.translate("MainWindow", u"Member Email 6:", None))
         self.on_spot_registration_member_email_field_6.setText("")
@@ -905,12 +877,37 @@ class Ui_MainWindow(object):
         self.on_spot_registration_member_email_field_7.setText("")
         self.on_spot_registration_member_phone_label_7.setText(QCoreApplication.translate("MainWindow", u"Member Phone 7:", None))
         self.on_spot_registration_member_phone_field_7.setText("")
+        self.on_spot_registration_member_name_label_4.setText(QCoreApplication.translate("MainWindow", u"Member Name 4:", None))
+        self.on_spot_registration_member_email_label_4.setText(QCoreApplication.translate("MainWindow", u"Member Email 4:", None))
+        self.on_spot_registration_member_email_field_4.setText("")
+        self.on_spot_registration_member_phone_label_4.setText(QCoreApplication.translate("MainWindow", u"Member Phone 4:", None))
+        self.on_spot_registration_member_phone_field_4.setText("")
+        self.on_spot_registration_member_name_label_5.setText(QCoreApplication.translate("MainWindow", u"Member Name 5:", None))
+        self.on_spot_registration_member_email_label_5.setText(QCoreApplication.translate("MainWindow", u"Member Email 5:", None))
+        self.on_spot_registration_member_email_field_5.setText("")
+        self.on_spot_registration_member_phone_label_5.setText(QCoreApplication.translate("MainWindow", u"Member Phone 5:", None))
+        self.on_spot_registration_member_phone_field_5.setText("")
         self.on_spot_registration_member_name_label_8.setText(QCoreApplication.translate("MainWindow", u"Member Name 8:", None))
         self.on_spot_registration_member_email_label_8.setText(QCoreApplication.translate("MainWindow", u"Member Email 8:", None))
         self.on_spot_registration_member_email_field_8.setText("")
         self.on_spot_registration_member_phone_label_8.setText(QCoreApplication.translate("MainWindow", u"Member Phone 8:", None))
         self.on_spot_registration_member_phone_field_8.setText("")
-        self.pushButton.setText(QCoreApplication.translate("MainWindow", u"Create Team", None))
+        self.on_spot_registration_member_name_label_1.setText(QCoreApplication.translate("MainWindow", u"Member Name 1:", None))
+        self.on_spot_registration_member_email_label_1.setText(QCoreApplication.translate("MainWindow", u"Member Email 1:", None))
+        self.on_spot_registration_member_email_field_1.setText("")
+        self.on_spot_registration_member_phone_label_1.setText(QCoreApplication.translate("MainWindow", u"Member Phone 1:", None))
+        self.on_spot_registration_member_phone_field_1.setText("")
+        self.on_spot_registration_member_name_label_2.setText(QCoreApplication.translate("MainWindow", u"Member Name 2:", None))
+        self.on_spot_registration_member_phone_field_2.setText("")
+        self.on_spot_registration_member_phone_label_2.setText(QCoreApplication.translate("MainWindow", u"Member Phone 2:", None))
+        self.on_spot_registration_member_email_label_2.setText(QCoreApplication.translate("MainWindow", u"Member Email 2:", None))
+        self.on_spot_registration_member_email_field_2.setText("")
+        self.on_spot_registration_member_phone_field_3.setText("")
+        self.on_spot_registration_member_email_label_3.setText(QCoreApplication.translate("MainWindow", u"Member Email 3:", None))
+        self.on_spot_registration_member_phone_label_3.setText(QCoreApplication.translate("MainWindow", u"Member Phone 3:", None))
+        self.on_spot_registration_member_name_label_3.setText(QCoreApplication.translate("MainWindow", u"Member Name 3:", None))
+        self.on_spot_registration_member_email_field_3.setText("")
+        self.on_spot_registration_create_team_button.setText(QCoreApplication.translate("MainWindow", u"Create Team", None))
         self.main_window_tabs.setTabText(self.main_window_tabs.indexOf(self.on_spot_registration_tab), QCoreApplication.translate("MainWindow", u"On Spot Registration", None))
         self.update_event_event_label.setText(QCoreApplication.translate("MainWindow", u"Event:", None))
         self.update_event_maximum_participants_label.setText(QCoreApplication.translate("MainWindow", u"Maximum Participants:", None))
