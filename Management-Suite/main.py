@@ -243,6 +243,7 @@ class MainWindow(QMainWindow, Ui_MainWindow):
                     "user_email": self.on_spot_registration_member_email_field_1.text(),
                     "user_phone": self.on_spot_registration_member_phone_field_1.text(),
                     "user_school": self.on_spot_registration_team_school_field.text(),
+                    "user_attendance": True,
                     "team_id": team_created_response.json()["id"],
                 },
                 {
@@ -250,6 +251,7 @@ class MainWindow(QMainWindow, Ui_MainWindow):
                     "user_email": self.on_spot_registration_member_email_field_2.text(),
                     "user_phone": self.on_spot_registration_member_phone_field_2.text(),
                     "user_school": self.on_spot_registration_team_school_field.text(),
+                    "user_attendance": True,
                     "team_id": team_created_response.json()["id"],
                 },
                 {
@@ -257,6 +259,7 @@ class MainWindow(QMainWindow, Ui_MainWindow):
                     "user_email": self.on_spot_registration_member_email_field_3.text(),
                     "user_phone": self.on_spot_registration_member_phone_field_3.text(),
                     "user_school": self.on_spot_registration_team_school_field.text(),
+                    "user_attendance": True,
                     "team_id": team_created_response.json()["id"],
                 },
                 {
@@ -264,6 +267,7 @@ class MainWindow(QMainWindow, Ui_MainWindow):
                     "user_email": self.on_spot_registration_member_email_field_4.text(),
                     "user_phone": self.on_spot_registration_member_phone_field_4.text(),
                     "user_school": self.on_spot_registration_team_school_field.text(),
+                    "user_attendance": True,
                     "team_id": team_created_response.json()["id"],
                 },
                 {
@@ -271,6 +275,7 @@ class MainWindow(QMainWindow, Ui_MainWindow):
                     "user_email": self.on_spot_registration_member_email_field_5.text(),
                     "user_phone": self.on_spot_registration_member_phone_field_5.text(),
                     "user_school": self.on_spot_registration_team_school_field.text(),
+                    "user_attendance": True,
                     "team_id": team_created_response.json()["id"],
                 },
                 {
@@ -278,6 +283,7 @@ class MainWindow(QMainWindow, Ui_MainWindow):
                     "user_email": self.on_spot_registration_member_email_field_6.text(),
                     "user_phone": self.on_spot_registration_member_phone_field_6.text(),
                     "user_school": self.on_spot_registration_team_school_field.text(),
+                    "user_attendance": True,
                     "team_id": team_created_response.json()["id"],
                 },
                 {
@@ -285,6 +291,7 @@ class MainWindow(QMainWindow, Ui_MainWindow):
                     "user_email": self.on_spot_registration_member_email_field_7.text(),
                     "user_phone": self.on_spot_registration_member_phone_field_7.text(),
                     "user_school": self.on_spot_registration_team_school_field.text(),
+                    "user_attendance": True,
                     "team_id": team_created_response.json()["id"],
                 },
                 {
@@ -292,6 +299,7 @@ class MainWindow(QMainWindow, Ui_MainWindow):
                     "user_email": self.on_spot_registration_member_email_field_8.text(),
                     "user_phone": self.on_spot_registration_member_phone_field_8.text(),
                     "user_school": self.on_spot_registration_team_school_field.text(),
+                    "user_attendance": True,
                     "team_id": team_created_response.json()["id"],
                 },
             ]
