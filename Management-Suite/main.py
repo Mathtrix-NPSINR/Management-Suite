@@ -3,6 +3,7 @@ import smtplib
 import requests
 import yagmail
 from PySide6.QtWidgets import QFileDialog, QMessageBox
+
 from ui_MainWindow import *
 
 API_URL = "http://0.0.0.0:8000/api"
@@ -309,7 +310,13 @@ class MainWindow(QMainWindow, Ui_MainWindow):
                     "Error registering team",
                     "The number of members to be registered exceeds the events member cap!",
                 )
-                requests.delete(f"{API_URL}/team/", params={"api-key": self.api_key, "team_id": team_created_response.json()["id"]})
+                requests.delete(
+                    f"{API_URL}/team/",
+                    params={
+                        "api-key": self.api_key,
+                        "team_id": team_created_response.json()["id"],
+                    },
+                )
                 return
 
             for user in valid_users_to_be_registered:
