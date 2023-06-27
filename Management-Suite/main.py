@@ -3,7 +3,6 @@ import smtplib
 import requests
 import yagmail
 from PySide6.QtWidgets import QFileDialog, QMessageBox
-
 from ui_MainWindow import *
 
 API_URL = "http://0.0.0.0:8000/api"
@@ -34,6 +33,11 @@ class MainWindow(QMainWindow, Ui_MainWindow):
         # Connect on spot registration buttons.
         self.on_spot_registration_create_team_button.clicked.connect(
             self.on_spot_registration_register_team
+        )
+
+        # Connect event member details buttons.
+        self.event_member_details_refresh_button.clicked.connect(
+            self.refresh_event_member_details_tree
         )
 
     def api_key_auth(self):
@@ -74,6 +78,9 @@ class MainWindow(QMainWindow, Ui_MainWindow):
 
         # Fill the on spot registration combo box with the event names.
         self.fill_on_spot_registration_event_combo_box()
+
+        # Fill the event member details combo box.
+        self.fill_member_details_combo_box()
 
     def mailing_list_auth(self):
         """
@@ -392,6 +399,123 @@ class MainWindow(QMainWindow, Ui_MainWindow):
 
         else:
             pass
+
+    def fill_member_details_combo_box(self):
+        """
+        Get the event names from the API and fill the event member details combo box with the event names.
+        """
+
+        # Request the API server for the details of all the events.
+        event_details = requests.get(
+            f"{API_URL}/event/", params={"api-key": self.api_key}
+        ).json()
+
+        # Add each event name as an entry to the combo box.
+        for event in event_details:
+            self.event_member_details_combo_box.addItem(event["event_name"])
+
+    def process_event_member_details(self):
+        """
+        Process the event member details sent by the API server to data usable by the TreeWidget.
+        """
+
+        # Get the event chosen in the combo box.
+        selection = self.event_member_details_combo_box.currentText()
+
+        # Retrieve the event details from the API server.
+        event_details = requests.get(
+            f"{API_URL}/event/", params={"api-key": self.api_key}
+        ).json()
+
+        # Get the event data of the chosen event.
+        for event in event_details:
+            if event["event_name"] == selection:
+                event_to_process = event
+
+        data = []
+
+        # Process the data into TreeWidget readable format.
+        for team in event_to_process["event_teams"]:
+            team_data = [
+                f"Name: {team['team_name']}",
+                f"School: {team['team_school']}",
+            ]
+
+            for member in team["team_members"]:
+                user_data = [
+                    f"Name: {member['user_name']}",
+                    f"Email: {member['user_email']}",
+                    f"Phone: {member['user_phone']}",
+                    f"School: {member['user_school']}",
+                    f"Attendance: {member['user_attendance']}",
+                ]
+
+                team_data.append(user_data)
+
+            data.append(team_data)
+
+        # Return the processed data.
+        return data
+
+    def fill_item(self, item, value):
+        """
+        Fill the tree widget from the dictionary/list using recursion.
+        """
+
+        item.setExpanded(True)
+
+        if type(value) is dict:
+            for key, val in sorted(value.items()):
+                child = QTreeWidgetItem()
+                child.setText(0, str(key))
+
+                item.addChild(child)
+
+                self.fill_item(child, val)
+
+        elif type(value) is list:
+            for val in value:
+                child = QTreeWidgetItem()
+                item.addChild(child)
+
+                if type(val) is dict:
+                    child.setText(0, "[dict]")
+                    self.fill_item(child, val)
+
+                elif type(val) is list:
+                    child.setText(0, "[list]")
+                    self.fill_item(child, val)
+
+                else:
+                    child.setText(0, str(val))
+
+                child.setExpanded(True)
+        else:
+            child = QTreeWidgetItem()
+            child.setText(0, str(value))
+
+            item.addChild(child)
+
+    def fill_widget(self, widget, value):
+        """
+        Fill the TreeWidget with the process data.
+        """
+
+        widget.clear()
+        self.fill_item(widget.invisibleRootItem(), value)
+
+    def refresh_event_member_details_tree(self):
+        """
+        Refresh the event member details tree.
+        """
+
+        # Clear the event member details tree.
+        self.event_member_details_tree.clear()
+
+        # Fill the event member details tree with the updated information.
+        self.fill_widget(
+            self.event_member_details_tree, self.process_event_member_details()
+        )
 
 
 app = QApplication([])
