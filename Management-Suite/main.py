@@ -131,7 +131,7 @@ class MainWindow(QMainWindow, Ui_MainWindow):
 
         # Request the API server for the details of all the events.
         event_details = requests.get(
-            f"{API_URL}/event/details", params={"api-key": self.api_key}
+            f"{API_URL}/event/", params={"api-key": self.api_key}
         ).json()
 
         # Add all participants as an entry to the combo box.
@@ -250,7 +250,7 @@ class MainWindow(QMainWindow, Ui_MainWindow):
 
         # Request the API server for the details of all the events.
         event_details = requests.get(
-            f"{API_URL}/event/details", params={"api-key": self.api_key}
+            f"{API_URL}/event/", params={"api-key": self.api_key}
         ).json()
 
         # Add each event name as an entry to the combo box.
@@ -268,7 +268,7 @@ class MainWindow(QMainWindow, Ui_MainWindow):
         if confirmation_dialog == QMessageBox.Yes:
             # Request the API server for details of all events
             event_details = requests.get(
-                f"{API_URL}/event/details", params={"api-key": self.api_key}
+                f"{API_URL}/event/", params={"api-key": self.api_key}
             ).json()
 
             # Get the event chosen in the combo box.
@@ -278,7 +278,6 @@ class MainWindow(QMainWindow, Ui_MainWindow):
             for event in event_details:
                 if event["event_name"] == selection:
                     event_id = event["id"]
-                    event_maximum_participants = event["event_maximum_participants"]
 
             # Create the json body containing team details to be posted to the API server with the information entered by the user.
             team_registration = {
@@ -381,24 +380,6 @@ class MainWindow(QMainWindow, Ui_MainWindow):
                     continue
 
                 valid_users_to_be_registered.append(user)
-
-            # If the number of users to be registered exceeds the maximum participants allowed by the event, notify the user and break out.
-            if len(valid_users_to_be_registered) > event_maximum_participants:
-                QMessageBox.warning(
-                    self,
-                    "Error registering team",
-                    "The number of members to be registered exceeds the events member cap!",
-                )
-
-                # Delete the team previously created as it is no longer valid.
-                requests.delete(
-                    f"{API_URL}/team/",
-                    params={
-                        "api-key": self.api_key,
-                        "team_id": team_created_response.json()["id"],
-                    },
-                )
-                return
 
             # Create each user from the valid_users_to_be_registered list.
             for user in valid_users_to_be_registered:
