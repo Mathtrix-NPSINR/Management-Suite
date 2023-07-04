@@ -5,7 +5,7 @@ import yagmail
 from PySide6.QtWidgets import QFileDialog, QMessageBox
 from ui_MainWindow import *
 
-API_URL = "http://0.0.0.0:8000/api"
+API_URL = "http://20.219.141.225:8000/api"
 
 
 class MainWindow(QMainWindow, Ui_MainWindow):
@@ -156,11 +156,13 @@ class MainWindow(QMainWindow, Ui_MainWindow):
         # Get the event chosen in the combo box.
         selection = self.mailing_list_recipients_combo_box.currentText()
 
+        # Request the API server for the details of all events.
+        data = requests.get(
+            f"{API_URL}/event/", params={"api-key": self.api_key}
+        ).json()
+
         # If the selection is all participants, request the API server for the email addresses of the all the users registered for Mathtrix.
         if selection == "All Participants":
-            data = requests.get(
-                f"{API_URL}/event/", params={"api-key": self.api_key}
-            ).json()
             return [
                 user["user_email"]
                 for event in data
@@ -168,13 +170,8 @@ class MainWindow(QMainWindow, Ui_MainWindow):
                 for user in team["team_members"]
             ]
 
-        # Request the API server for the details of all events.
-        event_details = requests.get(
-            f"{API_URL}/event/details", params={"api-key": self.api_key}
-        ).json()
-
         # Get the event ID of the chosen event.
-        for event in event_details:
+        for event in data:
             if event["event_name"] == selection:
                 event_id = event["id"]
 
