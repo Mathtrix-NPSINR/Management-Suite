@@ -1,7 +1,7 @@
 # -*- coding: utf-8 -*-
 
 ################################################################################
-## Form generated from reading UI file 'MainWindowHtSvGA.ui'
+## Form generated from reading UI file 'MainWindowvpVefL.ui'
 ##
 ## Created by: Qt User Interface Compiler version 6.5.1
 ##
@@ -900,6 +900,7 @@ class Ui_MainWindow(object):
 
         self.update_details_user_attendance_check_box = QCheckBox(self.update_details_tab)
         self.update_details_user_attendance_check_box.setObjectName(u"update_details_user_attendance_check_box")
+        self.update_details_user_attendance_check_box.setEnabled(False)
 
         self.horizontalLayout_29.addWidget(self.update_details_user_attendance_check_box)
 
