@@ -40,6 +40,14 @@ class MainWindow(QMainWindow, Ui_MainWindow):
             self.refresh_event_member_details_tree
         )
 
+        # Connect update details buttons.
+        self.update_details_load_team_details_button.clicked.connect(
+            self.update_details_load_current_team_details
+        )
+        self.update_details_update_team_details_button.clicked.connect(
+            self.update_team_details
+        )
+
     def api_key_auth(self):
         """
         Authenticate the event head through the API.
@@ -397,63 +405,6 @@ class MainWindow(QMainWindow, Ui_MainWindow):
         else:
             pass
 
-    def fill_member_details_combo_box(self):
-        """
-        Get the event names from the API and fill the event member details combo box with the event names.
-        """
-
-        # Request the API server for the details of all the events.
-        event_details = requests.get(
-            f"{API_URL}/event/", params={"api-key": self.api_key}
-        ).json()
-
-        # Add each event name as an entry to the combo box.
-        for event in event_details:
-            self.event_member_details_combo_box.addItem(event["event_name"])
-
-    def process_event_member_details(self):
-        """
-        Process the event member details sent by the API server to data usable by the TreeWidget.
-        """
-
-        # Get the event chosen in the combo box.
-        selection = self.event_member_details_combo_box.currentText()
-
-        # Retrieve the event details from the API server.
-        event_details = requests.get(
-            f"{API_URL}/event/", params={"api-key": self.api_key}
-        ).json()
-
-        # Get the event data of the chosen event.
-        for event in event_details:
-            if event["event_name"] == selection:
-                event_to_process = event
-
-        data = []
-
-        # Process the data into TreeWidget readable format.
-        for team in event_to_process["event_teams"]:
-            team_data = [
-                f"Name: {team['team_name']}",
-                f"School: {team['team_school']}",
-            ]
-
-            for member in team["team_members"]:
-                user_data = [
-                    f"Name: {member['user_name']}",
-                    f"Email: {member['user_email']}",
-                    f"Phone: {member['user_phone']}",
-                    f"School: {member['user_school']}",
-                    f"Attendance: {member['user_attendance']}",
-                ]
-
-                team_data.append(user_data)
-
-            data.append(team_data)
-
-        # Return the processed data.
-        return data
-
     def fill_item(self, item, value):
         """
         Fill the tree widget from the dictionary/list using recursion.
@@ -501,6 +452,64 @@ class MainWindow(QMainWindow, Ui_MainWindow):
         widget.clear()
         self.fill_item(widget.invisibleRootItem(), value)
 
+    def fill_member_details_combo_box(self):
+        """
+        Get the event names from the API and fill the event member details combo box with the event names.
+        """
+
+        # Request the API server for the details of all the events.
+        event_details = requests.get(
+            f"{API_URL}/event/", params={"api-key": self.api_key}
+        ).json()
+
+        # Add each event name as an entry to the combo box.
+        for event in event_details:
+            self.event_member_details_combo_box.addItem(event["event_name"])
+
+    def process_event_member_details(self):
+        """
+        Process the event member details sent by the API server to data usable by the TreeWidget.
+        """
+
+        # Get the event chosen in the combo box.
+        selection = self.event_member_details_combo_box.currentText()
+
+        # Retrieve the event details from the API server.
+        event_details = requests.get(
+            f"{API_URL}/event/", params={"api-key": self.api_key}
+        ).json()
+
+        # Get the event data of the chosen event.
+        for event in event_details:
+            if event["event_name"] == selection:
+                event_to_process = event
+
+        data = []
+
+        # Process the data into TreeWidget readable format.
+        for team in event_to_process["event_teams"]:
+            team_data = [
+                f"Name: {team['team_name']}",
+                f"School: {team['team_school']}",
+                f"Team ID: {team['id']}",
+            ]
+
+            for member in team["team_members"]:
+                user_data = [
+                    f"Name: {member['user_name']}",
+                    f"Email: {member['user_email']}",
+                    f"Phone: {member['user_phone']}",
+                    f"School: {member['user_school']}",
+                    f"Attendance: {member['user_attendance']}",
+                ]
+
+                team_data.append(user_data)
+
+            data.append(team_data)
+
+        # Return the processed data.
+        return data
+
     def refresh_event_member_details_tree(self):
         """
         Refresh the event member details tree.
@@ -513,6 +522,91 @@ class MainWindow(QMainWindow, Ui_MainWindow):
         self.fill_widget(
             self.event_member_details_tree, self.process_event_member_details()
         )
+
+    def process_team_data(self, team_data):
+        # Process the data into TreeWidget readable format.
+        processed_team_data = [
+            f"Name: {team_data['team_name']}",
+            f"School: {team_data['team_school']}",
+            f"Team ID: {team_data['id']}",
+        ]
+
+        for member in team_data["team_members"]:
+            user_data = [
+                f"Name: {member['user_name']}",
+                f"Email: {member['user_email']}",
+                f"Phone: {member['user_phone']}",
+                f"School: {member['user_school']}",
+                f"Attendance: {member['user_attendance']}",
+            ]
+
+            processed_team_data.append(user_data)
+
+        # Return the processed team data.
+        return processed_team_data
+
+    def update_details_load_current_team_details(self):
+        """
+        Fetch the team details from the provided team ID and populate the fields.
+        """
+
+        # Fetch team details.
+        team_id = int(self.update_details_team_id_field.text())
+        team_details = requests.get(
+            f"{API_URL}/team", params={"team_id": team_id, "api-key": self.api_key}
+        ).json()
+
+        # Enable the update fields and buttons.
+        self.update_details_team_name_field.setEnabled(True)
+        self.update_details_team_school_field.setEnabled(True)
+        self.update_details_update_team_details_button.setEnabled(True)
+
+        # Set the text of the update fields to their current value on the server.
+        self.update_details_team_name_field.setText(team_details["team_name"])
+        self.update_details_team_school_field.setText(team_details["team_school"])
+
+        # Set the update team data tree to the current values.
+        self.update_details_updated_team_details_tree.clear()
+        self.fill_widget(
+            self.update_details_updated_team_details_tree,
+            self.process_team_data(team_details),
+        )
+
+    def update_team_details(self):
+        """
+        Update the team details using the provided values in the fields.
+        """
+
+        # Fetch the entered data from the fields.
+        team_id = int(self.update_details_team_id_field.text())
+
+        data = {
+            "team_name": self.update_details_team_name_field.text(),
+            "team_school": self.update_details_team_school_field.text(),
+        }
+
+        # Make a PUT request to the server to update the team details.
+        updated_team_details = requests.put(
+            f"{API_URL}/team",
+            json=data,
+            params={"team_id": team_id, "api-key": self.api_key},
+        ).json()
+
+        # Process the updated team details to TreeWidget readable format.
+        processed_team_data = self.process_team_data(updated_team_details)
+
+        # Update the tree with the processed team data.
+        self.update_details_updated_team_details_tree.clear()
+        self.fill_widget(
+            self.update_details_updated_team_details_tree, processed_team_data
+        )
+
+        # Disable the input fields to prevent misclicks.
+        self.update_details_team_name_field.setEnabled(False)
+        self.update_details_team_school_field.setEnabled(False)
+        self.update_details_update_team_details_button.setEnabled(False)
+
+        self.update_details_team_id_field.setText("")
 
 
 app = QApplication([])
