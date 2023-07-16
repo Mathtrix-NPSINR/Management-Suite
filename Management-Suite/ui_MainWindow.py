@@ -1,7 +1,7 @@
 # -*- coding: utf-8 -*-
 
 ################################################################################
-## Form generated from reading UI file 'MainWindowkWipdS.ui'
+## Form generated from reading UI file 'MainWindowHtSvGA.ui'
 ##
 ## Created by: Qt User Interface Compiler version 6.5.1
 ##
@@ -16,11 +16,11 @@ from PySide6.QtGui import (QAction, QBrush, QColor, QConicalGradient,
     QIcon, QImage, QKeySequence, QLinearGradient,
     QPainter, QPalette, QPixmap, QRadialGradient,
     QTransform)
-from PySide6.QtWidgets import (QApplication, QComboBox, QFrame, QGridLayout,
-    QHBoxLayout, QHeaderView, QLabel, QLineEdit,
-    QMainWindow, QPushButton, QSizePolicy, QSpacerItem,
-    QTabWidget, QTextEdit, QTreeWidget, QTreeWidgetItem,
-    QVBoxLayout, QWidget)
+from PySide6.QtWidgets import (QApplication, QCheckBox, QComboBox, QFrame,
+    QGridLayout, QHBoxLayout, QHeaderView, QLabel,
+    QLineEdit, QMainWindow, QPushButton, QSizePolicy,
+    QSpacerItem, QTabWidget, QTextEdit, QTreeWidget,
+    QTreeWidgetItem, QVBoxLayout, QWidget)
 
 class Ui_MainWindow(object):
     def setupUi(self, MainWindow):
@@ -695,6 +695,253 @@ class Ui_MainWindow(object):
         self.verticalLayout_7.addLayout(self.horizontalLayout_22)
 
         self.main_window_tabs.addTab(self.event_member_details_tab, "")
+        self.update_details_tab = QWidget()
+        self.update_details_tab.setObjectName(u"update_details_tab")
+        self.horizontalLayout_30 = QHBoxLayout(self.update_details_tab)
+        self.horizontalLayout_30.setObjectName(u"horizontalLayout_30")
+        self.verticalLayout_4 = QVBoxLayout()
+        self.verticalLayout_4.setObjectName(u"verticalLayout_4")
+        self.horizontalLayout_10 = QHBoxLayout()
+        self.horizontalLayout_10.setObjectName(u"horizontalLayout_10")
+        self.update_details_team_id_label = QLabel(self.update_details_tab)
+        self.update_details_team_id_label.setObjectName(u"update_details_team_id_label")
+
+        self.horizontalLayout_10.addWidget(self.update_details_team_id_label)
+
+        self.update_details_team_id_field = QLineEdit(self.update_details_tab)
+        self.update_details_team_id_field.setObjectName(u"update_details_team_id_field")
+
+        self.horizontalLayout_10.addWidget(self.update_details_team_id_field)
+
+
+        self.verticalLayout_4.addLayout(self.horizontalLayout_10)
+
+        self.horizontalLayout_13 = QHBoxLayout()
+        self.horizontalLayout_13.setObjectName(u"horizontalLayout_13")
+        self.horizontalSpacer_11 = QSpacerItem(40, 20, QSizePolicy.Expanding, QSizePolicy.Minimum)
+
+        self.horizontalLayout_13.addItem(self.horizontalSpacer_11)
+
+        self.update_details_load_team_details_button = QPushButton(self.update_details_tab)
+        self.update_details_load_team_details_button.setObjectName(u"update_details_load_team_details_button")
+
+        self.horizontalLayout_13.addWidget(self.update_details_load_team_details_button)
+
+        self.horizontalSpacer_10 = QSpacerItem(40, 20, QSizePolicy.Expanding, QSizePolicy.Minimum)
+
+        self.horizontalLayout_13.addItem(self.horizontalSpacer_10)
+
+
+        self.verticalLayout_4.addLayout(self.horizontalLayout_13)
+
+        self.horizontalLayout_11 = QHBoxLayout()
+        self.horizontalLayout_11.setObjectName(u"horizontalLayout_11")
+        self.update_details_team_name_label = QLabel(self.update_details_tab)
+        self.update_details_team_name_label.setObjectName(u"update_details_team_name_label")
+
+        self.horizontalLayout_11.addWidget(self.update_details_team_name_label)
+
+        self.update_details_team_name_field = QLineEdit(self.update_details_tab)
+        self.update_details_team_name_field.setObjectName(u"update_details_team_name_field")
+        self.update_details_team_name_field.setEnabled(False)
+
+        self.horizontalLayout_11.addWidget(self.update_details_team_name_field)
+
+
+        self.verticalLayout_4.addLayout(self.horizontalLayout_11)
+
+        self.horizontalLayout_12 = QHBoxLayout()
+        self.horizontalLayout_12.setObjectName(u"horizontalLayout_12")
+        self.update_details_team_school_label = QLabel(self.update_details_tab)
+        self.update_details_team_school_label.setObjectName(u"update_details_team_school_label")
+
+        self.horizontalLayout_12.addWidget(self.update_details_team_school_label)
+
+        self.update_details_team_school_field = QLineEdit(self.update_details_tab)
+        self.update_details_team_school_field.setObjectName(u"update_details_team_school_field")
+        self.update_details_team_school_field.setEnabled(False)
+
+        self.horizontalLayout_12.addWidget(self.update_details_team_school_field)
+
+
+        self.verticalLayout_4.addLayout(self.horizontalLayout_12)
+
+        self.horizontalLayout_21 = QHBoxLayout()
+        self.horizontalLayout_21.setObjectName(u"horizontalLayout_21")
+        self.horizontalSpacer_14 = QSpacerItem(40, 20, QSizePolicy.Expanding, QSizePolicy.Minimum)
+
+        self.horizontalLayout_21.addItem(self.horizontalSpacer_14)
+
+        self.update_details_update_team_details_button = QPushButton(self.update_details_tab)
+        self.update_details_update_team_details_button.setObjectName(u"update_details_update_team_details_button")
+        self.update_details_update_team_details_button.setEnabled(False)
+
+        self.horizontalLayout_21.addWidget(self.update_details_update_team_details_button)
+
+        self.horizontalSpacer_15 = QSpacerItem(40, 20, QSizePolicy.Expanding, QSizePolicy.Minimum)
+
+        self.horizontalLayout_21.addItem(self.horizontalSpacer_15)
+
+
+        self.verticalLayout_4.addLayout(self.horizontalLayout_21)
+
+        self.update_details_updated_team_details_display_label = QLabel(self.update_details_tab)
+        self.update_details_updated_team_details_display_label.setObjectName(u"update_details_updated_team_details_display_label")
+
+        self.verticalLayout_4.addWidget(self.update_details_updated_team_details_display_label)
+
+        self.update_details_updated_team_details_tree = QTreeWidget(self.update_details_tab)
+        __qtreewidgetitem1 = QTreeWidgetItem()
+        __qtreewidgetitem1.setText(0, u"1");
+        self.update_details_updated_team_details_tree.setHeaderItem(__qtreewidgetitem1)
+        self.update_details_updated_team_details_tree.setObjectName(u"update_details_updated_team_details_tree")
+
+        self.verticalLayout_4.addWidget(self.update_details_updated_team_details_tree)
+
+
+        self.horizontalLayout_30.addLayout(self.verticalLayout_4)
+
+        self.line_4 = QFrame(self.update_details_tab)
+        self.line_4.setObjectName(u"line_4")
+        self.line_4.setFrameShape(QFrame.VLine)
+        self.line_4.setFrameShadow(QFrame.Sunken)
+
+        self.horizontalLayout_30.addWidget(self.line_4)
+
+        self.verticalLayout_5 = QVBoxLayout()
+        self.verticalLayout_5.setObjectName(u"verticalLayout_5")
+        self.horizontalLayout_23 = QHBoxLayout()
+        self.horizontalLayout_23.setObjectName(u"horizontalLayout_23")
+        self.update_details_user_id_label = QLabel(self.update_details_tab)
+        self.update_details_user_id_label.setObjectName(u"update_details_user_id_label")
+
+        self.horizontalLayout_23.addWidget(self.update_details_user_id_label)
+
+        self.update_details_user_id_field = QLineEdit(self.update_details_tab)
+        self.update_details_user_id_field.setObjectName(u"update_details_user_id_field")
+
+        self.horizontalLayout_23.addWidget(self.update_details_user_id_field)
+
+
+        self.verticalLayout_5.addLayout(self.horizontalLayout_23)
+
+        self.horizontalLayout_24 = QHBoxLayout()
+        self.horizontalLayout_24.setObjectName(u"horizontalLayout_24")
+        self.horizontalSpacer_16 = QSpacerItem(40, 20, QSizePolicy.Expanding, QSizePolicy.Minimum)
+
+        self.horizontalLayout_24.addItem(self.horizontalSpacer_16)
+
+        self.update_details_load_user_details_button = QPushButton(self.update_details_tab)
+        self.update_details_load_user_details_button.setObjectName(u"update_details_load_user_details_button")
+
+        self.horizontalLayout_24.addWidget(self.update_details_load_user_details_button)
+
+        self.horizontalSpacer_17 = QSpacerItem(40, 20, QSizePolicy.Expanding, QSizePolicy.Minimum)
+
+        self.horizontalLayout_24.addItem(self.horizontalSpacer_17)
+
+
+        self.verticalLayout_5.addLayout(self.horizontalLayout_24)
+
+        self.horizontalLayout_25 = QHBoxLayout()
+        self.horizontalLayout_25.setObjectName(u"horizontalLayout_25")
+        self.update_details_user_name_label = QLabel(self.update_details_tab)
+        self.update_details_user_name_label.setObjectName(u"update_details_user_name_label")
+
+        self.horizontalLayout_25.addWidget(self.update_details_user_name_label)
+
+        self.update_details_user_name_field = QLineEdit(self.update_details_tab)
+        self.update_details_user_name_field.setObjectName(u"update_details_user_name_field")
+        self.update_details_user_name_field.setEnabled(False)
+
+        self.horizontalLayout_25.addWidget(self.update_details_user_name_field)
+
+
+        self.verticalLayout_5.addLayout(self.horizontalLayout_25)
+
+        self.horizontalLayout_26 = QHBoxLayout()
+        self.horizontalLayout_26.setObjectName(u"horizontalLayout_26")
+        self.update_details_user_email_label = QLabel(self.update_details_tab)
+        self.update_details_user_email_label.setObjectName(u"update_details_user_email_label")
+
+        self.horizontalLayout_26.addWidget(self.update_details_user_email_label)
+
+        self.update_details_user_email_field = QLineEdit(self.update_details_tab)
+        self.update_details_user_email_field.setObjectName(u"update_details_user_email_field")
+        self.update_details_user_email_field.setEnabled(False)
+
+        self.horizontalLayout_26.addWidget(self.update_details_user_email_field)
+
+
+        self.verticalLayout_5.addLayout(self.horizontalLayout_26)
+
+        self.horizontalLayout_28 = QHBoxLayout()
+        self.horizontalLayout_28.setObjectName(u"horizontalLayout_28")
+        self.update_details_user_phone_label = QLabel(self.update_details_tab)
+        self.update_details_user_phone_label.setObjectName(u"update_details_user_phone_label")
+
+        self.horizontalLayout_28.addWidget(self.update_details_user_phone_label)
+
+        self.update_details_user_phone_field = QLineEdit(self.update_details_tab)
+        self.update_details_user_phone_field.setObjectName(u"update_details_user_phone_field")
+        self.update_details_user_phone_field.setEnabled(False)
+
+        self.horizontalLayout_28.addWidget(self.update_details_user_phone_field)
+
+
+        self.verticalLayout_5.addLayout(self.horizontalLayout_28)
+
+        self.horizontalLayout_29 = QHBoxLayout()
+        self.horizontalLayout_29.setObjectName(u"horizontalLayout_29")
+        self.update_details_user_attendance_label = QLabel(self.update_details_tab)
+        self.update_details_user_attendance_label.setObjectName(u"update_details_user_attendance_label")
+
+        self.horizontalLayout_29.addWidget(self.update_details_user_attendance_label)
+
+        self.update_details_user_attendance_check_box = QCheckBox(self.update_details_tab)
+        self.update_details_user_attendance_check_box.setObjectName(u"update_details_user_attendance_check_box")
+
+        self.horizontalLayout_29.addWidget(self.update_details_user_attendance_check_box)
+
+
+        self.verticalLayout_5.addLayout(self.horizontalLayout_29)
+
+        self.horizontalLayout_27 = QHBoxLayout()
+        self.horizontalLayout_27.setObjectName(u"horizontalLayout_27")
+        self.horizontalSpacer_20 = QSpacerItem(40, 20, QSizePolicy.Expanding, QSizePolicy.Minimum)
+
+        self.horizontalLayout_27.addItem(self.horizontalSpacer_20)
+
+        self.update_details_update_user_details_button = QPushButton(self.update_details_tab)
+        self.update_details_update_user_details_button.setObjectName(u"update_details_update_user_details_button")
+        self.update_details_update_user_details_button.setEnabled(False)
+
+        self.horizontalLayout_27.addWidget(self.update_details_update_user_details_button)
+
+        self.horizontalSpacer_21 = QSpacerItem(40, 20, QSizePolicy.Expanding, QSizePolicy.Minimum)
+
+        self.horizontalLayout_27.addItem(self.horizontalSpacer_21)
+
+
+        self.verticalLayout_5.addLayout(self.horizontalLayout_27)
+
+        self.update_details_updated_user_details_display_label = QLabel(self.update_details_tab)
+        self.update_details_updated_user_details_display_label.setObjectName(u"update_details_updated_user_details_display_label")
+
+        self.verticalLayout_5.addWidget(self.update_details_updated_user_details_display_label)
+
+        self.update_details_updated_user_details_tree = QTreeWidget(self.update_details_tab)
+        __qtreewidgetitem2 = QTreeWidgetItem()
+        __qtreewidgetitem2.setText(0, u"1");
+        self.update_details_updated_user_details_tree.setHeaderItem(__qtreewidgetitem2)
+        self.update_details_updated_user_details_tree.setObjectName(u"update_details_updated_user_details_tree")
+
+        self.verticalLayout_5.addWidget(self.update_details_updated_user_details_tree)
+
+
+        self.horizontalLayout_30.addLayout(self.verticalLayout_5)
+
+        self.main_window_tabs.addTab(self.update_details_tab, "")
 
         self.verticalLayout.addWidget(self.main_window_tabs)
 
@@ -739,7 +986,7 @@ class Ui_MainWindow(object):
 
         self.retranslateUi(MainWindow)
 
-        self.main_window_tabs.setCurrentIndex(2)
+        self.main_window_tabs.setCurrentIndex(3)
 
 
         QMetaObject.connectSlotsByName(MainWindow)
@@ -807,6 +1054,22 @@ class Ui_MainWindow(object):
         self.event_member_details_event_label.setText(QCoreApplication.translate("MainWindow", u"Event:", None))
         self.event_member_details_refresh_button.setText(QCoreApplication.translate("MainWindow", u"Refresh Details", None))
         self.main_window_tabs.setTabText(self.main_window_tabs.indexOf(self.event_member_details_tab), QCoreApplication.translate("MainWindow", u"Event Member Details", None))
+        self.update_details_team_id_label.setText(QCoreApplication.translate("MainWindow", u"Team ID:", None))
+        self.update_details_load_team_details_button.setText(QCoreApplication.translate("MainWindow", u"Load", None))
+        self.update_details_team_name_label.setText(QCoreApplication.translate("MainWindow", u"Team Name:", None))
+        self.update_details_team_school_label.setText(QCoreApplication.translate("MainWindow", u"Team School:", None))
+        self.update_details_update_team_details_button.setText(QCoreApplication.translate("MainWindow", u"Update", None))
+        self.update_details_updated_team_details_display_label.setText(QCoreApplication.translate("MainWindow", u"Updated Team Details:", None))
+        self.update_details_user_id_label.setText(QCoreApplication.translate("MainWindow", u"User ID:", None))
+        self.update_details_load_user_details_button.setText(QCoreApplication.translate("MainWindow", u"Load", None))
+        self.update_details_user_name_label.setText(QCoreApplication.translate("MainWindow", u"User Name:", None))
+        self.update_details_user_email_label.setText(QCoreApplication.translate("MainWindow", u"User Email:", None))
+        self.update_details_user_phone_label.setText(QCoreApplication.translate("MainWindow", u"User Phone:", None))
+        self.update_details_user_attendance_label.setText(QCoreApplication.translate("MainWindow", u"User Attendance:", None))
+        self.update_details_user_attendance_check_box.setText("")
+        self.update_details_update_user_details_button.setText(QCoreApplication.translate("MainWindow", u"Update", None))
+        self.update_details_updated_user_details_display_label.setText(QCoreApplication.translate("MainWindow", u"Updated User Details:", None))
+        self.main_window_tabs.setTabText(self.main_window_tabs.indexOf(self.update_details_tab), QCoreApplication.translate("MainWindow", u"Update Details", None))
         self.api_key_label.setText(QCoreApplication.translate("MainWindow", u"API Key:", None))
         self.api_key_login_button.setText(QCoreApplication.translate("MainWindow", u"Login", None))
         self.copyright_label.setText(QCoreApplication.translate("MainWindow", u"Copyright \u00a9 2023 National Public School Indiranagar. All rights reserved.", None))
