@@ -47,6 +47,12 @@ class MainWindow(QMainWindow, Ui_MainWindow):
         self.update_details_update_team_details_button.clicked.connect(
             self.update_team_details
         )
+        self.update_details_load_user_details_button.clicked.connect(
+            self.update_details_load_current_user_details
+        )
+        self.update_details_update_user_details_button.clicked.connect(
+            self.update_user_details
+        )
 
     def api_key_auth(self):
         """
@@ -524,7 +530,10 @@ class MainWindow(QMainWindow, Ui_MainWindow):
         )
 
     def process_team_data(self, team_data):
-        # Process the data into TreeWidget readable format.
+        """
+        Process the data into TreeWidget readable format.
+        """
+
         processed_team_data = [
             f"Name: {team_data['team_name']}",
             f"School: {team_data['team_school']}",
@@ -607,6 +616,88 @@ class MainWindow(QMainWindow, Ui_MainWindow):
         self.update_details_update_team_details_button.setEnabled(False)
 
         self.update_details_team_id_field.setText("")
+
+    def process_user_data(self, user_data):
+        # Process the data into TreeWidget readable format and return it.
+        return [
+            f"Name: {user_data['user_name']}",
+            f"Email: {user_data['user_email']}",
+            f"Phone: {user_data['user_phone']}",
+            f"School: {user_data['user_school']}",
+            f"Attendance: {user_data['user_attendance']}",
+        ]
+
+    def update_details_load_current_user_details(self):
+        """
+        Fetch the user details from the provided user ID and populate the fields.
+        """
+
+        # Fetch user details.
+        user_id = int(self.update_details_user_id_field.text())
+        user_details = requests.get(
+            f"{API_URL}/user", params={"user_id": user_id, "api-key": self.api_key}
+        ).json()
+
+        # Enable the update fields and buttons.
+        self.update_details_user_name_field.setEnabled(True)
+        self.update_details_user_email_field.setEnabled(True)
+        self.update_details_user_phone_field.setEnabled(True)
+        self.update_details_user_attendance_check_box.setEnabled(True)
+        self.update_details_update_user_details_button.setEnabled(True)
+
+        # Set the text of the update fields to their current value on the server.
+        self.update_details_user_name_field.setText(user_details["user_name"])
+        self.update_details_user_email_field.setText(user_details["user_email"])
+        self.update_details_user_phone_field.setText(user_details["user_phone"])
+
+        self.update_details_user_attendance_check_box.setChecked(user_details["user_attendance"])
+
+        # Set the update user data tree to the current values.
+        self.update_details_updated_user_details_tree.clear()
+        self.fill_widget(
+            self.update_details_updated_user_details_tree,
+            self.process_user_data(user_details),
+        )
+
+    def update_user_details(self):
+        """
+        Update the user details using the provided values in the fields.
+        """
+
+        # Fetch the entered data from the fields.
+        user_id = int(self.update_details_user_id_field.text())
+
+        data = {
+            "user_name": self.update_details_user_name_field.text(),
+            "user_email": self.update_details_user_email_field.text(),
+            "user_phone": self.update_details_user_phone_field.text(),
+            "user_attendance": self.update_details_user_attendance_check_box.isChecked(),
+        }
+
+        # Make a PUT request to the server to update the user details.
+        updated_user_details = requests.put(
+            f"{API_URL}/user",
+            json=data,
+            params={"user_id": user_id, "api-key": self.api_key},
+        ).json()
+
+        # Process the updated user details to TreeWidget readable format.
+        processed_user_data = self.process_user_data(updated_user_details)
+
+        # Update the tree with the processed user data.
+        self.update_details_updated_user_details_tree.clear()
+        self.fill_widget(
+            self.update_details_updated_user_details_tree, processed_user_data
+        )
+
+        # Disable the input fields to prevent misclicks.
+        self.update_details_user_name_field.setEnabled(False)
+        self.update_details_user_email_field.setEnabled(False)
+        self.update_details_user_phone_field.setEnabled(False)
+        self.update_details_user_attendance_check_box.setEnabled(False)
+        self.update_details_update_user_details_button.setEnabled(False)
+
+        self.update_details_user_id_field.setText("")
 
 
 app = QApplication([])
