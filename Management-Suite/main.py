@@ -495,13 +495,14 @@ class MainWindow(QMainWindow, Ui_MainWindow):
         # Process the data into TreeWidget readable format.
         for team in event_to_process["event_teams"]:
             team_data = [
+                f"Team ID: {team['id']}",
                 f"Name: {team['team_name']}",
                 f"School: {team['team_school']}",
-                f"Team ID: {team['id']}",
             ]
 
             for member in team["team_members"]:
                 user_data = [
+                    f"User ID: {member['id']}",
                     f"Name: {member['user_name']}",
                     f"Email: {member['user_email']}",
                     f"Phone: {member['user_phone']}",
@@ -535,13 +536,14 @@ class MainWindow(QMainWindow, Ui_MainWindow):
         """
 
         processed_team_data = [
+            f"Team ID: {team_data['id']}",
             f"Name: {team_data['team_name']}",
             f"School: {team_data['team_school']}",
-            f"Team ID: {team_data['id']}",
         ]
 
         for member in team_data["team_members"]:
             user_data = [
+                f"User ID: {member['id']}",
                 f"Name: {member['user_name']}",
                 f"Email: {member['user_email']}",
                 f"Phone: {member['user_phone']}",
@@ -620,6 +622,7 @@ class MainWindow(QMainWindow, Ui_MainWindow):
     def process_user_data(self, user_data):
         # Process the data into TreeWidget readable format and return it.
         return [
+            f"User ID: {user_data['id']}",
             f"Name: {user_data['user_name']}",
             f"Email: {user_data['user_email']}",
             f"Phone: {user_data['user_phone']}",
@@ -650,7 +653,9 @@ class MainWindow(QMainWindow, Ui_MainWindow):
         self.update_details_user_email_field.setText(user_details["user_email"])
         self.update_details_user_phone_field.setText(user_details["user_phone"])
 
-        self.update_details_user_attendance_check_box.setChecked(user_details["user_attendance"])
+        self.update_details_user_attendance_check_box.setChecked(
+            user_details["user_attendance"]
+        )
 
         # Set the update user data tree to the current values.
         self.update_details_updated_user_details_tree.clear()
