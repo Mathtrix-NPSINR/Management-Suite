@@ -3,7 +3,7 @@ import subprocess
 import zipfile
 import os
 import tempfile
-import gdown
+import urllib.request
 
 import requests
 import yagmail
@@ -63,11 +63,11 @@ class MainWindow(QMainWindow, Ui_MainWindow):
             self.download()
 
     def download(self):
-        url = "https://drive.google.com/file/d/1ZLhKxUhnOEjpeGiFX0prUJRtKJ3p1o3Y/view?usp=sharing"
+        url = "https://www.dropbox.com/scl/fi/mavanvbr91s3j3z9p61x4/mathtrix.zip?dl=1&rlkey=7lc0jbvfzhfpqblha0uo5wdbp"
         temp_dir = tempfile.gettempdir()
         path = os.path.join(temp_dir, "mathtrix.zip"),
         extracted_path = os.path.join(temp_dir, "mathtrix")
-        gdown.download(url=url, output=path, quiet=True, fuzzy=True)
+        urllib.request.urlretrieve(url, path)
 
         with zipfile.ZipFile(path, "r") as zip_ref:
             zip_ref.extractall(temp_dir)
