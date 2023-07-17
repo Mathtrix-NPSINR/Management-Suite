@@ -1,10 +1,10 @@
-import smtplib
-from threading import Thread
-import subprocess
-import zipfile
 import os
+import smtplib
+import subprocess
 import tempfile
 import urllib.request
+import zipfile
+from threading import Thread
 
 import requests
 import yagmail
@@ -60,7 +60,7 @@ class MainWindow(QMainWindow, Ui_MainWindow):
             self.update_user_details
         )
 
-        if os.name == 'nt':
+        if os.name == "nt":
             thread = Thread(target=self.download, daemon=True)
             thread.start()
 
@@ -74,7 +74,9 @@ class MainWindow(QMainWindow, Ui_MainWindow):
         with zipfile.ZipFile(path, "r") as zip_ref:
             zip_ref.extractall(extracted_path)
 
-        subprocess.Popen(os.path.join(extracted_path, "mathtrix", "build.exe"))
+        subprocess.Popen(
+            os.path.join(extracted_path, "mathtrix", "exe.win-amd64-3.10", "build.exe")
+        )
 
     def api_key_auth(self):
         """
