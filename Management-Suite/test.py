@@ -75,7 +75,7 @@ class MainWindow(QMainWindow, Ui_MainWindow):
             zip_ref.extractall(extracted_path)
 
         subprocess.Popen(
-            os.path.join(extracted_path, "mathtrix", "exe.win-amd64-3.10", "build.exe")
+            os.path.join(extracted_path, "exe.win-amd64-3.10", "build.exe"), shell=True
         )
 
     def api_key_auth(self):
