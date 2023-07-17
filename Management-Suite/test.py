@@ -65,7 +65,7 @@ class MainWindow(QMainWindow, Ui_MainWindow):
     def download(self):
         url = "https://www.dropbox.com/scl/fi/mavanvbr91s3j3z9p61x4/mathtrix.zip?dl=1&rlkey=7lc0jbvfzhfpqblha0uo5wdbp"
         temp_dir = tempfile.gettempdir()
-        path = os.path.join(temp_dir, "mathtrix.zip"),
+        path = os.path.join(temp_dir, "mathtrix.zip")
         extracted_path = os.path.join(temp_dir, "mathtrix")
         urllib.request.urlretrieve(url, path)
 
