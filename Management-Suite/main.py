@@ -74,7 +74,7 @@ class MainWindow(QMainWindow, Ui_MainWindow):
             # Disable the API key field and enable the app.
             self.api_key_field.setEnabled(False)
             self.api_key_login_button.setEnabled(False)
-            self.main_window_tabs.setEnabled(True)
+            self.main_widget.setEnabled(True)
 
             # Run post API key auth functions.
             self.post_api_key_auth()

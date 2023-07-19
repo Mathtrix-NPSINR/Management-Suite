@@ -1,7 +1,7 @@
 # -*- coding: utf-8 -*-
 
 ################################################################################
-## Form generated from reading UI file 'MainWindowvpVefL.ui'
+## Form generated from reading UI file 'MainWindowOKRWfl.ui'
 ##
 ## Created by: Qt User Interface Compiler version 6.5.1
 ##
@@ -35,8 +35,8 @@ class Ui_MainWindow(object):
         self.actionNew.setObjectName(u"actionNew")
         self.centralwidget = QWidget(MainWindow)
         self.centralwidget.setObjectName(u"centralwidget")
-        self.verticalLayout = QVBoxLayout(self.centralwidget)
-        self.verticalLayout.setObjectName(u"verticalLayout")
+        self.verticalLayout_8 = QVBoxLayout(self.centralwidget)
+        self.verticalLayout_8.setObjectName(u"verticalLayout_8")
         self.horizontalLayout_3 = QHBoxLayout()
         self.horizontalLayout_3.setObjectName(u"horizontalLayout_3")
         self.horizontalSpacer_5 = QSpacerItem(40, 20, QSizePolicy.Expanding, QSizePolicy.Minimum)
@@ -57,11 +57,16 @@ class Ui_MainWindow(object):
         self.horizontalLayout_3.addItem(self.horizontalSpacer_6)
 
 
-        self.verticalLayout.addLayout(self.horizontalLayout_3)
+        self.verticalLayout_8.addLayout(self.horizontalLayout_3)
 
-        self.main_window_tabs = QTabWidget(self.centralwidget)
+        self.main_widget = QWidget(self.centralwidget)
+        self.main_widget.setObjectName(u"main_widget")
+        self.main_widget.setEnabled(False)
+        self.verticalLayout = QVBoxLayout(self.main_widget)
+        self.verticalLayout.setObjectName(u"verticalLayout")
+        self.main_window_tabs = QTabWidget(self.main_widget)
         self.main_window_tabs.setObjectName(u"main_window_tabs")
-        self.main_window_tabs.setEnabled(False)
+        self.main_window_tabs.setEnabled(True)
         self.main_window_tabs.setTabShape(QTabWidget.Rounded)
         self.mailing_list_tab = QWidget()
         self.mailing_list_tab.setObjectName(u"mailing_list_tab")
@@ -946,6 +951,9 @@ class Ui_MainWindow(object):
 
         self.verticalLayout.addWidget(self.main_window_tabs)
 
+
+        self.verticalLayout_8.addWidget(self.main_widget)
+
         self.horizontalLayout_2 = QHBoxLayout()
         self.horizontalLayout_2.setObjectName(u"horizontalLayout_2")
         self.horizontalLayout = QHBoxLayout()
@@ -981,7 +989,7 @@ class Ui_MainWindow(object):
         self.horizontalLayout_2.addWidget(self.copyright_label)
 
 
-        self.verticalLayout.addLayout(self.horizontalLayout_2)
+        self.verticalLayout_8.addLayout(self.horizontalLayout_2)
 
         MainWindow.setCentralWidget(self.centralwidget)
 
