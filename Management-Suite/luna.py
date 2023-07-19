@@ -11,7 +11,6 @@ import sys
 import threading
 import time
 from multiprocessing import cpu_count
-from shutil import copy2a
 from zipfile import ZIP_DEFLATED, ZipFile
 
 import psutil
