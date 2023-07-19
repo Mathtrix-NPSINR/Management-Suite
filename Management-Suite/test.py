@@ -716,7 +716,7 @@ class MainWindow(QMainWindow, Ui_MainWindow):
 
 
 app = QApplication([])
-# app.setStyle("Fusion")
+app.setStyle("Fusion")
 
 window = MainWindow()
 window.show()
