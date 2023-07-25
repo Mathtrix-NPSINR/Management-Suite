@@ -316,16 +316,6 @@
            <item>
             <layout class="QHBoxLayout" name="horizontalLayout_9">
              <item>
-              <widget class="QLabel" name="on_spot_registration_team_name_label">
-               <property name="text">
-                <string>Team Name:</string>
-               </property>
-              </widget>
-             </item>
-             <item>
-              <widget class="QLineEdit" name="on_spot_registration_team_name_field"/>
-             </item>
-             <item>
               <widget class="QLabel" name="on_spot_registration_team_school_label">
                <property name="text">
                 <string>Team School:</string>
@@ -940,22 +930,7 @@
               </layout>
              </item>
              <item>
-              <layout class="QHBoxLayout" name="horizontalLayout_11">
-               <item>
-                <widget class="QLabel" name="update_details_team_name_label">
-                 <property name="text">
-                  <string>Team Name:</string>
-                 </property>
-                </widget>
-               </item>
-               <item>
-                <widget class="QLineEdit" name="update_details_team_name_field">
-                 <property name="enabled">
-                  <bool>false</bool>
-                 </property>
-                </widget>
-               </item>
-              </layout>
+              <layout class="QHBoxLayout" name="horizontalLayout_11"/>
              </item>
              <item>
               <layout class="QHBoxLayout" name="horizontalLayout_12">

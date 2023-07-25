@@ -1,7 +1,7 @@
 # -*- coding: utf-8 -*-
 
 ################################################################################
-## Form generated from reading UI file 'MainWindowOKRWfl.ui'
+## Form generated from reading UI file 'MainWindowktpNNw.ui'
 ##
 ## Created by: Qt User Interface Compiler version 6.5.1
 ##
@@ -66,7 +66,7 @@ class Ui_MainWindow(object):
         self.verticalLayout.setObjectName(u"verticalLayout")
         self.main_window_tabs = QTabWidget(self.main_widget)
         self.main_window_tabs.setObjectName(u"main_window_tabs")
-        self.main_window_tabs.setEnabled(True)
+        self.main_window_tabs.setEnabled(False)
         self.main_window_tabs.setTabShape(QTabWidget.Rounded)
         self.mailing_list_tab = QWidget()
         self.mailing_list_tab.setObjectName(u"mailing_list_tab")
@@ -228,16 +228,6 @@ class Ui_MainWindow(object):
         self.verticalLayout_3.setObjectName(u"verticalLayout_3")
         self.horizontalLayout_9 = QHBoxLayout()
         self.horizontalLayout_9.setObjectName(u"horizontalLayout_9")
-        self.on_spot_registration_team_name_label = QLabel(self.on_spot_registration_tab)
-        self.on_spot_registration_team_name_label.setObjectName(u"on_spot_registration_team_name_label")
-
-        self.horizontalLayout_9.addWidget(self.on_spot_registration_team_name_label)
-
-        self.on_spot_registration_team_name_field = QLineEdit(self.on_spot_registration_tab)
-        self.on_spot_registration_team_name_field.setObjectName(u"on_spot_registration_team_name_field")
-
-        self.horizontalLayout_9.addWidget(self.on_spot_registration_team_name_field)
-
         self.on_spot_registration_team_school_label = QLabel(self.on_spot_registration_tab)
         self.on_spot_registration_team_school_label.setObjectName(u"on_spot_registration_team_school_label")
 
@@ -741,17 +731,6 @@ class Ui_MainWindow(object):
 
         self.horizontalLayout_11 = QHBoxLayout()
         self.horizontalLayout_11.setObjectName(u"horizontalLayout_11")
-        self.update_details_team_name_label = QLabel(self.update_details_tab)
-        self.update_details_team_name_label.setObjectName(u"update_details_team_name_label")
-
-        self.horizontalLayout_11.addWidget(self.update_details_team_name_label)
-
-        self.update_details_team_name_field = QLineEdit(self.update_details_tab)
-        self.update_details_team_name_field.setObjectName(u"update_details_team_name_field")
-        self.update_details_team_name_field.setEnabled(False)
-
-        self.horizontalLayout_11.addWidget(self.update_details_team_name_field)
-
 
         self.verticalLayout_4.addLayout(self.horizontalLayout_11)
 
@@ -1015,7 +994,6 @@ class Ui_MainWindow(object):
         self.mailing_list_add_attachments_button.setText(QCoreApplication.translate("MainWindow", u"Add Attachments", None))
         self.mailing_list_send_email_button.setText(QCoreApplication.translate("MainWindow", u"Send Email", None))
         self.main_window_tabs.setTabText(self.main_window_tabs.indexOf(self.mailing_list_tab), QCoreApplication.translate("MainWindow", u"Mailing List", None))
-        self.on_spot_registration_team_name_label.setText(QCoreApplication.translate("MainWindow", u"Team Name:", None))
         self.on_spot_registration_team_school_label.setText(QCoreApplication.translate("MainWindow", u"Team School:", None))
         self.on_spot_registration_event_label.setText(QCoreApplication.translate("MainWindow", u"Event:", None))
         self.on_spot_registration_member_name_label_6.setText(QCoreApplication.translate("MainWindow", u"Member Name 6:", None))
@@ -1065,7 +1043,6 @@ class Ui_MainWindow(object):
         self.main_window_tabs.setTabText(self.main_window_tabs.indexOf(self.event_member_details_tab), QCoreApplication.translate("MainWindow", u"Event Member Details", None))
         self.update_details_team_id_label.setText(QCoreApplication.translate("MainWindow", u"Team ID:", None))
         self.update_details_load_team_details_button.setText(QCoreApplication.translate("MainWindow", u"Load", None))
-        self.update_details_team_name_label.setText(QCoreApplication.translate("MainWindow", u"Team Name:", None))
         self.update_details_team_school_label.setText(QCoreApplication.translate("MainWindow", u"Team School:", None))
         self.update_details_update_team_details_button.setText(QCoreApplication.translate("MainWindow", u"Update", None))
         self.update_details_updated_team_details_display_label.setText(QCoreApplication.translate("MainWindow", u"Updated Team Details:", None))
