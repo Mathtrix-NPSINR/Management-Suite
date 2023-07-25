@@ -1,5 +1,4 @@
 import smtplib
-
 import requests
 import yagmail
 from PySide6.QtWidgets import QFileDialog, QMessageBox
@@ -75,6 +74,7 @@ class MainWindow(QMainWindow, Ui_MainWindow):
             self.api_key_field.setEnabled(False)
             self.api_key_login_button.setEnabled(False)
             self.main_widget.setEnabled(True)
+            self.main_window_tabs.setEnabled(True)
 
             # Run post API key auth functions.
             self.post_api_key_auth()
@@ -299,7 +299,6 @@ class MainWindow(QMainWindow, Ui_MainWindow):
 
             # Create the json body containing team details to be posted to the API server with the information entered by the user.
             team_registration = {
-                "team_name": self.on_spot_registration_team_name_field.text(),
                 "team_school": self.on_spot_registration_team_school_field.text(),
                 "team_event": selection,
                 "event_id": event_id,
@@ -496,7 +495,6 @@ class MainWindow(QMainWindow, Ui_MainWindow):
         for team in event_to_process["event_teams"]:
             team_data = [
                 f"Team ID: {team['id']}",
-                f"Name: {team['team_name']}",
                 f"School: {team['team_school']}",
             ]
 
@@ -537,7 +535,6 @@ class MainWindow(QMainWindow, Ui_MainWindow):
 
         processed_team_data = [
             f"Team ID: {team_data['id']}",
-            f"Name: {team_data['team_name']}",
             f"School: {team_data['team_school']}",
         ]
 
@@ -560,7 +557,6 @@ class MainWindow(QMainWindow, Ui_MainWindow):
         """
         Fetch the team details from the provided team ID and populate the fields.
         """
-
         # Fetch team details.
         team_id = int(self.update_details_team_id_field.text())
         team_details = requests.get(
@@ -568,12 +564,10 @@ class MainWindow(QMainWindow, Ui_MainWindow):
         ).json()
 
         # Enable the update fields and buttons.
-        self.update_details_team_name_field.setEnabled(True)
         self.update_details_team_school_field.setEnabled(True)
         self.update_details_update_team_details_button.setEnabled(True)
 
         # Set the text of the update fields to their current value on the server.
-        self.update_details_team_name_field.setText(team_details["team_name"])
         self.update_details_team_school_field.setText(team_details["team_school"])
 
         # Set the update team data tree to the current values.
@@ -592,7 +586,6 @@ class MainWindow(QMainWindow, Ui_MainWindow):
         team_id = int(self.update_details_team_id_field.text())
 
         data = {
-            "team_name": self.update_details_team_name_field.text(),
             "team_school": self.update_details_team_school_field.text(),
         }
 
@@ -613,7 +606,6 @@ class MainWindow(QMainWindow, Ui_MainWindow):
         )
 
         # Disable the input fields to prevent misclicks.
-        self.update_details_team_name_field.setEnabled(False)
         self.update_details_team_school_field.setEnabled(False)
         self.update_details_update_team_details_button.setEnabled(False)
 
@@ -706,7 +698,7 @@ class MainWindow(QMainWindow, Ui_MainWindow):
 
 
 app = QApplication([])
-# app.setStyle("Fusion")
+app.setStyle("Fusion")
 
 window = MainWindow()
 window.show()
